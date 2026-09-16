@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conditions d'utilisation — MesFinances</title>
+<meta name="description" content="Conditions d'utilisation de l'application MesFinances : compte, abonnement, données et responsabilité.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper: #EEECE0;
+    --paper-2: #E6E3D4;
+    --ink: #17241C;
+    --ink-soft: #4A5548;
+    --rule: #CFCABA;
+    --indigo: #5457E5;
+    --indigo-deep: #3E40B8;
+    --debit: #C0392B;
+    --credit: #1F8A4C;
+    --radius: 14px;
+    --serif: 'Fraunces', serif;
+    --sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, monospace;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:var(--sans); line-height:1.55; -webkit-font-smoothing:antialiased;
+    background-image:
+      linear-gradient(var(--paper), var(--paper)),
+      repeating-linear-gradient(180deg, transparent, transparent 37px, rgba(23,36,28,0.05) 38px);
+  }
+  a{color:inherit;}
+  .wrap{max-width:1040px; margin:0 auto; padding:0 28px;}
+
+  header.nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(238,236,224,0.86); backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--rule);
+  }
+  .nav-inner{display:flex; align-items:center; justify-content:space-between; padding:16px 28px; max-width:1040px; margin:0 auto;}
+  .brand{display:flex; align-items:center; gap:10px; font-family:var(--serif); font-weight:600; font-size:19px; letter-spacing:-0.01em; text-decoration:none;}
+  .brand .coin{
+    width:28px; height:28px; border-radius:50%; background:var(--indigo); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-family:var(--mono); font-size:13px; font-weight:600;
+    box-shadow: inset 0 -2px 0 rgba(0,0,0,0.18);
+  }
+  nav.links{display:flex; gap:28px; font-size:14.5px;}
+  nav.links a{text-decoration:none; color:var(--ink-soft); border-bottom:1px solid transparent; padding-bottom:2px; transition:border-color .15s ease, color .15s ease;}
+  nav.links a:hover{color:var(--ink); border-color:var(--ink);}
+  @media (max-width:640px){ nav.links{display:none;} }
+
+  .page-head{padding:64px 0 40px;}
+  .eyebrow{
+    font-family:var(--mono); font-size:12.5px; letter-spacing:.09em; text-transform:uppercase;
+    color:var(--indigo-deep); font-weight:600; display:flex; align-items:center; gap:10px; margin-bottom:18px;
+  }
+  .eyebrow::before{content:""; width:22px; height:1px; background:var(--indigo-deep);}
+  h1{
+    font-family:var(--serif); font-weight:600; font-size:clamp(30px, 4.2vw, 44px);
+    line-height:1.08; letter-spacing:-0.015em; margin:0 0 14px;
+  }
+  .page-head .lede{font-size:16px; color:var(--ink-soft); max-width:60ch; margin:0;}
+  .updated{
+    font-family:var(--mono); font-size:12.5px; color:var(--ink-soft); margin-top:18px;
+  }
+
+  .section{padding:8px 0 64px;}
+  .ledger{border-top:1px solid var(--ink);}
+  .row{
+    display:grid; grid-template-columns:120px 1fr; gap:24px;
+    padding:26px 0; border-bottom:1px solid var(--rule);
+  }
+  @media (max-width:640px){ .row{grid-template-columns:1fr; gap:8px;} }
+  .row .code{
+    font-family:var(--mono); font-size:12.5px; font-weight:600; color:var(--indigo-deep);
+    letter-spacing:.04em; padding-top:3px;
+  }
+  .row .code .n{display:block; color:var(--ink-soft); font-weight:400; font-size:11px; margin-top:3px;}
+  .row h2{font-family:var(--sans); font-weight:600; font-size:18px; margin:0 0 10px;}
+  .row p{margin:0 0 12px; color:var(--ink-soft); font-size:15px; max-width:66ch;}
+  .row p:last-child{margin-bottom:0;}
+  .row ul{margin:0 0 12px; padding-left:20px; color:var(--ink-soft); font-size:15px; max-width:66ch;}
+  .row ul li{margin-bottom:6px;}
+  .row a.inline{color:var(--indigo-deep); text-decoration:underline; text-decoration-color:var(--rule); text-underline-offset:2px;}
+  .row a.inline:hover{text-decoration-color:var(--indigo-deep);}
+
+  footer{padding:44px 0 56px; border-top:1px solid var(--rule);}
+  .foot-row{display:flex; flex-wrap:wrap; justify-content:space-between; gap:20px; align-items:center;}
+  .foot-links{display:flex; gap:22px; font-size:14px; color:var(--ink-soft);}
+  .foot-links a{text-decoration:none;}
+  .foot-links a:hover{text-decoration:underline;}
+  .copy{font-size:13px; color:var(--ink-soft); font-family:var(--mono);}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html"><span class="coin">M</span>MesFinances</a>
+    <nav class="links">
+      <a href="index.html">Accueil</a>
+      <a href="politique-confidentialite.html">Confidentialité</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-head">
+    <div class="wrap">
+      <div class="eyebrow">Cadre d'utilisation</div>
+      <h1>Conditions d'utilisation</h1>
+      <p class="lede">Les règles qui encadrent l'usage de l'application MesFinances et de l'abonnement Premium.</p>
+      <div class="updated">Dernière mise à jour — 16 septembre 2026</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="ledger">
+
+        <div class="row">
+          <div class="code">ART. 01<span class="n">Objet</span></div>
+          <div>
+            <p>MesFinances est une application de suivi de finances personnelles (comptes, transactions, budget, opérations récurrentes) éditée par Jacky Brossard, développeur indépendant. Les présentes conditions régissent l'utilisation de l'application sur iOS.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="code">ART. 02<span class="n">Compte</span></div>
+          <div>
+            <p>L'accès à l'application nécessite un compte, créé avec une adresse e-mail et un mot de passe. Chaque utilisateur est responsable de la confidentialité de ses identifiants et de l'usage fait de son compte.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="code">ART. 03<span class="n">Abonnement Premium</span></div>
+          <div>
+            <p>L'application propose un essai gratuit de 7 jours, sans engagement.</p>
+            <ul>
+              <li>À l'issue de l'essai, l'abonnement Premium (mensuel ou annuel, au tarif affiché dans l'application) est activé automatiquement, sauf annulation avant la fin de l'essai.</li>
+              <li>L'abonnement est géré par l'App Store et se renouvelle automatiquement à chaque échéance, sauf annulation au moins 24 heures avant la fin de la période en cours.</li>
+              <li>Le paiement est prélevé sur le compte Apple de l'utilisateur.</li>
+              <li>L'annulation se fait depuis les réglages du compte Apple (Réglages → nom → Abonnements), et non depuis l'application.</li>
+              <li>Aucun remboursement au prorata n'est effectué en cas d'annulation en cours de période ; l'accès reste actif jusqu'à la fin de la période déjà payée.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="code">ART. 04<span class="n">Données</span></div>
+          <div>
+            <p>Les données saisies sont stockées sur une base sécurisée, propre à chaque compte. L'utilisateur reste responsable de l'exactitude de ses données et de la réalisation régulière de ses propres sauvegardes via la fonction dédiée de l'application.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="code">ART. 05<span class="n">Usage autorisé</span></div>
+          <div>
+            <p>L'application est destinée à un usage personnel. Il est interdit de tenter d'accéder aux données d'un autre utilisateur, de perturber le fonctionnement de l'application, ou de l'utiliser à des fins illégales.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="code">ART. 06<span class="n">Responsabilité</span></div>
+          <div>
+            <p>MesFinances est un outil d'aide au suivi budgétaire personnel. Il ne constitue en aucun cas un conseil financier, comptable ou fiscal. L'éditeur ne pourra être tenu responsable des décisions financières prises sur la base des informations affichées, ni d'une perte de données résultant d'un usage non conforme ou de l'absence de sauvegarde.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="code">ART. 07<span class="n">Disponibilité</span></div>
+          <div>
+            <p>L'éditeur s'efforce d'assurer un accès continu à l'application, sans garantir une disponibilité absolue (maintenance, panne réseau ou du prestataire d'hébergement, etc.).</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="code">ART. 08<span class="n">Résiliation</span></div>
+          <div>
+            <p>L'utilisateur peut supprimer son compte à tout moment en contactant l'éditeur à l'adresse indiquée en bas de page. L'éditeur se réserve le droit de suspendre un compte en cas de non-respect des présentes conditions.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="code">ART. 09<span class="n">Modifications</span></div>
+          <div>
+            <p>Ces conditions peuvent être mises à jour ; la date figure en haut de cette page. Toute modification substantielle sera signalée aux utilisateurs.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="code">ART. 10<span class="n">Droit applicable</span></div>
+          <div>
+            <p>Les présentes conditions sont soumises au droit français. Tout litige relève des tribunaux français compétents.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="code">ART. 11<span class="n">Contact</span></div>
+          <div>
+            <p>Pour toute question relative à ces conditions : <a class="inline" href="mailto:mesfinances@jb-app.fr">mesfinances@jb-app.fr</a>. Voir aussi notre <a class="inline" href="politique-confidentialite.html">politique de confidentialité</a>.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer id="contact">
+  <div class="wrap foot-row">
+    <div class="foot-links">
+      <a href="index.html">Accueil</a>
+      <a href="politique-confidentialite.html">Politique de confidentialité</a>
+      <a href="mailto:mesfinances@jb-app.fr">mesfinances@jb-app.fr</a>
+    </div>
+    <div class="copy">© 2026 JB App — MesFinances</div>
+  </div>
+</footer>
+
+</body>
+</html>
