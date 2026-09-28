@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /mode-emploi.html
+Disallow: /en/user-guide.html
+Disallow: /email-confirme.html
+
+Sitemap: https://jb-app.fr/sitemap.xml
