@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Assistance — Score Golf</title>
+<link rel="canonical" href="https://jb-app.fr/scoregolf/support.html">
+<meta name="description" content="Assistance Score Golf : questions fréquentes et contact.">
+<link rel="alternate" hreflang="fr" href="https://jb-app.fr/scoregolf/support.html">
+<link rel="alternate" hreflang="en" href="https://jb-app.fr/scoregolf/en/support.html">
+<link rel="alternate" hreflang="es" href="https://jb-app.fr/scoregolf/es/soporte.html">
+<link rel="alternate" hreflang="it" href="https://jb-app.fr/scoregolf/it/assistenza.html">
+<link rel="alternate" hreflang="de" href="https://jb-app.fr/scoregolf/de/support.html">
+<link rel="alternate" hreflang="x-default" href="https://jb-app.fr/scoregolf/support.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EEECE0; --ink:#17241C; --ink-soft:#4A5548; --rule:#CFCABA;
+    --accent:#2E7D4F; --accent-deep:#1E5E3A; --bad:#C0392B; --good:#1F8A4C;
+    --radius:14px;
+    --serif:'Fraunces', serif;
+    --sans:'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --mono:'IBM Plex Mono', ui-monospace, SFMono-Regular, monospace;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:var(--sans); line-height:1.55; -webkit-font-smoothing:antialiased;
+    background-image:linear-gradient(var(--paper), var(--paper)), repeating-linear-gradient(180deg, transparent, transparent 37px, rgba(23,36,28,0.05) 38px);}
+  a{color:inherit;}
+  .wrap{max-width:1040px; margin:0 auto; padding:0 28px;}
+  header.nav{position:sticky; top:0; z-index:50; background:rgba(238,236,224,0.86); backdrop-filter:blur(8px); border-bottom:1px solid var(--rule);}
+  .nav-inner{display:flex; align-items:center; justify-content:space-between; padding:16px 28px; max-width:1040px; margin:0 auto;}
+  .brand{display:flex; align-items:center; gap:10px; font-family:var(--serif); font-weight:600; font-size:19px; letter-spacing:-0.01em; text-decoration:none;}
+  .brand-logo{width:28px; height:28px; border-radius:8px; display:block; object-fit:cover;}
+  nav.links{display:flex; gap:28px; font-size:14.5px;}
+  nav.links a{text-decoration:none; color:var(--ink-soft); border-bottom:1px solid transparent; padding-bottom:2px; transition:border-color .15s ease, color .15s ease;}
+  nav.links a:hover{color:var(--ink); border-color:var(--ink);}
+  @media (max-width:640px){ nav.links{display:none;} }
+  .eyebrow{font-family:var(--mono); font-size:12.5px; letter-spacing:.09em; text-transform:uppercase; color:var(--accent-deep); font-weight:600; display:flex; align-items:center; gap:10px; margin-bottom:18px;}
+  .eyebrow::before{content:""; width:22px; height:1px; background:var(--accent-deep);}
+  h1{font-family:var(--serif); font-weight:600; font-size:clamp(34px, 5vw, 54px); line-height:1.04; letter-spacing:-0.015em; margin:0 0 22px;}
+  h1 em{font-style:italic; font-weight:500; color:var(--accent-deep);}
+  .hero{padding:76px 0 64px;}
+  .hero-grid{display:grid; grid-template-columns:1.05fr 0.95fr; gap:56px; align-items:center;}
+  @media (max-width:860px){ .hero-grid{grid-template-columns:1fr; gap:44px;} }
+  .lede{font-size:17px; color:var(--ink-soft); max-width:46ch; margin:0 0 34px;}
+  .cta-row{display:flex; flex-wrap:wrap; align-items:center; gap:18px;}
+  .badge-live{display:inline-flex; align-items:center; gap:10px; font-family:var(--mono); font-size:13.5px; font-weight:500; background:var(--ink); color:var(--paper); padding:12px 18px; border-radius:999px; text-decoration:none;}
+  .badge-live .dot{width:7px; height:7px; border-radius:50%; background:#E2B93B; box-shadow:0 0 0 3px rgba(226,185,59,0.25);}
+  .link-quiet{font-size:14.5px; text-decoration:underline; text-decoration-color:var(--rule); text-underline-offset:3px; color:var(--ink-soft);}
+  .link-quiet:hover{text-decoration-color:var(--ink);}
+  .small-note{font-family:var(--mono); font-size:12.5px; color:var(--ink-soft); margin-top:14px;}
+  .card-wrap{display:flex; justify-content:center;}
+  .scorecard{width:280px; background:#FCFBF6; color:var(--ink); border-radius:4px 4px 0 0; padding:22px 20px 18px; box-shadow:0 24px 60px -20px rgba(23,36,28,0.35), 0 2px 0 rgba(23,36,28,0.05); position:relative; font-family:var(--mono); font-size:12.5px; transform:rotate(-1.4deg);}
+  .scorecard::after{content:""; position:absolute; left:0; right:0; bottom:-9px; height:18px; background:linear-gradient(-45deg, #FCFBF6 8px, transparent 0), linear-gradient(45deg, #FCFBF6 8px, transparent 0); background-size:16px 16px; background-repeat:repeat-x;}
+  .receipt-head{text-align:center; margin-bottom:14px;}
+  .receipt-head .rname{font-family:var(--serif); font-weight:600; font-size:16px;}
+  .receipt-head .rsub{color:var(--ink-soft); font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; margin-top:2px;}
+  .rline{display:flex; justify-content:space-between; gap:10px; padding:6px 0; border-bottom:1px dashed var(--rule); opacity:0; transform:translateY(6px); animation:rline-in .5s ease forwards;}
+  .rline .rlabel{color:var(--ink-soft);}
+  .rline .ramt{font-weight:600;}
+  .rline .ramt.good{color:var(--good);} .rline .ramt.bad{color:var(--bad);}
+  .rline.total{border-bottom:none; border-top:2px solid var(--ink); margin-top:6px; padding-top:12px; font-weight:600;}
+  .rline:nth-child(2){animation-delay:.15s;} .rline:nth-child(3){animation-delay:.45s;} .rline:nth-child(4){animation-delay:.75s;} .rline:nth-child(5){animation-delay:1.05s;} .rline:nth-child(6){animation-delay:1.35s;} .rline:nth-child(7){animation-delay:1.75s;}
+  @keyframes rline-in{ to{ opacity:1; transform:translateY(0);} }
+  @media (prefers-reduced-motion:reduce){ .rline{animation:none; opacity:1; transform:none;} }
+  .section{padding:64px 0;}
+  .section-head{margin-bottom:36px; max-width:56ch;}
+  .section-head .eyebrow{margin-bottom:12px;}
+  h2{font-family:var(--serif); font-weight:600; font-size:clamp(24px,3vw,32px); letter-spacing:-0.01em; margin:0 0 10px;}
+  .section-head p{color:var(--ink-soft); margin:0; font-size:15.5px;}
+  .ledger{border-top:1px solid var(--ink);}
+  .row{display:grid; grid-template-columns:120px 1fr; gap:24px; padding:24px 0; border-bottom:1px solid var(--rule);}
+  @media (max-width:640px){ .row{grid-template-columns:1fr; gap:8px;} }
+  .row .code{font-family:var(--mono); font-size:12.5px; font-weight:600; color:var(--accent-deep); letter-spacing:.04em; padding-top:3px;}
+  .row .code .n{display:block; color:var(--ink-soft); font-weight:400; font-size:11px; margin-top:3px;}
+  .row h2, .row h3{font-family:var(--sans); font-weight:600; font-size:17px; margin:0 0 8px;}
+  .row p{margin:0 0 12px; color:var(--ink-soft); font-size:15px; max-width:66ch;}
+  .row p:last-child{margin-bottom:0;}
+  .row ul{margin:0 0 12px; padding-left:20px; color:var(--ink-soft); font-size:15px; max-width:66ch;}
+  .row ul li{margin-bottom:6px;}
+  .row a.inline{color:var(--accent-deep); text-decoration:underline; text-decoration-color:var(--rule); text-underline-offset:2px;}
+  .row a.inline:hover{text-decoration-color:var(--accent-deep);}
+  .page-head{padding:64px 0 40px;}
+  .page-head h1{font-size:clamp(30px, 4.2vw, 44px); margin:0 0 14px;}
+  .page-head .lede{font-size:16px; max-width:60ch; margin:0;}
+  .updated{font-family:var(--mono); font-size:12.5px; color:var(--ink-soft); margin-top:18px;}
+  .page-head + .section{padding-top:8px;}
+  .pricing-grid{display:grid; grid-template-columns:1fr 1fr; gap:20px; max-width:680px;}
+  @media (max-width:640px){ .pricing-grid{grid-template-columns:1fr;} }
+  .price-card{background:#FCFBF6; border:1px solid var(--rule); border-radius:var(--radius); padding:26px 24px;}
+  .price-card.featured{border-color:var(--accent-deep); box-shadow:0 12px 30px -14px rgba(46,125,79,0.35);}
+  .price-card .plan-name{font-weight:600; font-size:14px; color:var(--ink-soft); margin-bottom:6px;}
+  .price-card .plan-price{font-family:var(--serif); font-weight:600; font-size:32px; letter-spacing:-0.01em; margin-bottom:2px;}
+  .price-card .plan-price span{font-family:var(--sans); font-weight:500; font-size:14px; color:var(--ink-soft);}
+  .price-card .plan-note{font-size:13px; color:var(--ink-soft); margin:0;}
+  .price-card .save-tag{display:inline-block; font-family:var(--mono); font-size:11px; font-weight:600; color:var(--good); background:rgba(31,138,76,0.1); padding:3px 9px; border-radius:999px; margin-bottom:10px;}
+  .foot-small{font-size:13px; color:var(--ink-soft); margin-top:18px;}
+  .trust{background:var(--ink); color:var(--paper); padding:52px 0;}
+  .trust .wrap{display:grid; grid-template-columns:repeat(4,1fr); gap:28px;}
+  @media (max-width:760px){ .trust .wrap{grid-template-columns:repeat(2,1fr);} }
+  .trust-item .t-num{font-family:var(--mono); font-size:11px; color:#9FB8A8; letter-spacing:.08em; margin-bottom:8px;}
+  .trust-item p{margin:0; font-family:var(--serif); font-size:16.5px; line-height:1.35;}
+  footer{padding:44px 0 56px; border-top:1px solid var(--rule);}
+  .foot-row{display:flex; flex-wrap:wrap; justify-content:space-between; gap:20px; align-items:center;}
+  .foot-links{display:flex; flex-wrap:wrap; gap:22px; font-size:14px; color:var(--ink-soft);}
+  .foot-links a{text-decoration:none;}
+  .foot-links a:hover{text-decoration:underline;}
+  .copy{font-size:13px; color:var(--ink-soft); font-family:var(--mono);}
+
+</style>
+</head>
+<body>
+<header class="nav"><div class="nav-inner">
+<a class="brand" href="./"><img src="logo.png" alt="Score Golf" class="brand-logo">Score Golf</a>
+<nav class="links"><a href="./">Accueil</a><a href="politique-confidentialite.html">Confidentialité</a><a href="support.html">Assistance</a><a href="en/support.html" lang="en" hreflang="en">English</a><a href="es/soporte.html" lang="es" hreflang="es">Español</a><a href="it/assistenza.html" lang="it" hreflang="it">Italiano</a><a href="de/support.html" lang="de" hreflang="de">Deutsch</a></nav>
+</div></header>
+<main>
+<section class="page-head"><div class="wrap">
+<div class="eyebrow">Assistance</div><h1>Besoin d'aide ?</h1>
+<p class="lede">Les réponses aux questions les plus fréquentes sur Score Golf.</p></div></section>
+<section class="section"><div class="wrap"><div class="ledger">
+<div class="row"><div class="code">ÉCRIRE<span class="n">Contact</span></div><div>
+<p>Une question, un bug, un parcours à corriger ? Écris-nous : <a class="inline" href="mailto:scoregolf@jb-app.fr">scoregolf@jb-app.fr</a>. Nous répondons généralement sous quelques jours.</p>
+</div></div>
+<div class="row"><div class="code">PARCOURS<span class="n">Détection</span></div><div>
+<h2>L'app ne détecte pas mon parcours</h2>
+<p>Vérifie que la localisation est activée pour Score Golf dans Réglages → Confidentialité et sécurité → Service de localisation, et que tu es à moins de 2 km du parcours. Si le parcours n'existe pas encore, crée-le depuis l'onglet Parcours (bouton « + »).</p>
+</div></div>
+<div class="row"><div class="code">PARCOURS<span class="n">Communauté</span></div><div>
+<h2>D'où viennent les parcours ?</h2>
+<p>Les parcours sont ajoutés par les joueurs et partagés avec tous. Tu peux modifier ou supprimer ceux que tu as créés. Pour signaler un parcours (nom choquant, erreur, doublon), ouvre-le et touche le drapeau « Signaler ce parcours » : nous examinons chaque signalement et retirons ou corrigeons les contenus inappropriés. Tu peux aussi nous écrire.</p>
+</div></div>
+<div class="row"><div class="code">ACHAT<span class="n">Déblocage</span></div><div>
+<h2>Comment débloquer l'application ?</h2>
+<p>Après tes 2 parties gratuites, l'écran de déblocage s'ouvre quand tu crées une nouvelle partie ; tu peux aussi le trouver dans Profil → Compte. Il s'agit d'un achat unique, sans abonnement.</p>
+</div></div>
+<div class="row"><div class="code">ACHAT<span class="n">Restaurer</span></div><div>
+<h2>J'ai changé d'iPhone ou réinstallé l'app</h2>
+<p>Ouvre l'écran de déblocage et appuie sur « Restaurer mes achats », avec le même identifiant Apple que pour l'achat.</p>
+</div></div>
+<div class="row"><div class="code">COMPTE<span class="n">Suppression</span></div><div>
+<h2>Comment supprimer mon compte ?</h2>
+<p>Profil → Compte → Supprimer mon compte, puis saisis le mot de confirmation. Tes parcours restent à la communauté, sans lien avec toi ; tes parties enregistrées sur l'iPhone ne sont pas supprimées.</p>
+</div></div>
+<div class="row"><div class="code">DONNÉES<span class="n">Sauvegarde</span></div><div>
+<h2>Mes données sont-elles sauvegardées ?</h2>
+<p>Oui : une sauvegarde automatique est enregistrée dans ton iCloud Drive personnel (au lancement, au plus une fois par 24 h). Tu peux aussi la déclencher ou restaurer depuis Profil → Sauvegarde.</p>
+</div></div>
+<div class="row"><div class="code">MESURE<span class="n">Unités</span></div><div>
+<h2>Mètres ou yards ?</h2>
+<p>Sur l'écran d'accueil, l'icône règle te permet de choisir mètres, yards, ou de suivre les réglages de ton iPhone.</p>
+</div></div>
+<div class="row"><div class="code">DISTANCE<span class="n">Chariot, voiturette</span></div><div>
+<h2>Téléphone sur le chariot ou voiturette</h2>
+<p>Si ton téléphone est posé sur le chariot, bascule la pastille en rouge sur l'écran de saisie. En voiturette, coche « Utilisation d'une voiturette » à la création de la partie : la distance parcourue n'est alors ni mesurée ni affichée, seule la distance des coups l'est.</p>
+</div></div>
+</div></div></section>
+</main>
+<footer><div class="wrap foot-row">
+<div class="foot-links"><a href="./">Accueil</a><a href="politique-confidentialite.html">Politique de confidentialité</a><a href="support.html">Assistance</a><a href="../mentions-legales.html">Mentions légales</a><a href="en/support.html" lang="en" hreflang="en">English</a><a href="es/soporte.html" lang="es" hreflang="es">Español</a><a href="it/assistenza.html" lang="it" hreflang="it">Italiano</a><a href="de/support.html" lang="de" hreflang="de">Deutsch</a><a href="mailto:scoregolf@jb-app.fr">scoregolf@jb-app.fr</a></div>
+<div class="copy">© 2026 JB App — Score Golf</div>
+</div></footer>
+</body>
+</html>
