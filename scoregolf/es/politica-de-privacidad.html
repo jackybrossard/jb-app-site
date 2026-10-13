@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de privacidad — Score Golf</title>
+<link rel="canonical" href="https://jb-app.fr/scoregolf/es/politica-de-privacidad.html">
+<meta name="description" content="Política de privacidad de la app Score Golf: datos tratados, alojamiento, derechos y contacto.">
+<link rel="alternate" hreflang="fr" href="https://jb-app.fr/scoregolf/politique-confidentialite.html">
+<link rel="alternate" hreflang="en" href="https://jb-app.fr/scoregolf/en/privacy-policy.html">
+<link rel="alternate" hreflang="es" href="https://jb-app.fr/scoregolf/es/politica-de-privacidad.html">
+<link rel="alternate" hreflang="de" href="https://jb-app.fr/scoregolf/de/datenschutz.html">
+<link rel="alternate" hreflang="x-default" href="https://jb-app.fr/scoregolf/politique-confidentialite.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EEECE0; --ink:#17241C; --ink-soft:#4A5548; --rule:#CFCABA;
+    --accent:#2E7D4F; --accent-deep:#1E5E3A; --bad:#C0392B; --good:#1F8A4C;
+    --radius:14px;
+    --serif:'Fraunces', serif;
+    --sans:'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --mono:'IBM Plex Mono', ui-monospace, SFMono-Regular, monospace;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:var(--sans); line-height:1.55; -webkit-font-smoothing:antialiased;
+    background-image:linear-gradient(var(--paper), var(--paper)), repeating-linear-gradient(180deg, transparent, transparent 37px, rgba(23,36,28,0.05) 38px);}
+  a{color:inherit;}
+  .wrap{max-width:1040px; margin:0 auto; padding:0 28px;}
+  header.nav{position:sticky; top:0; z-index:50; background:rgba(238,236,224,0.86); backdrop-filter:blur(8px); border-bottom:1px solid var(--rule);}
+  .nav-inner{display:flex; align-items:center; justify-content:space-between; padding:16px 28px; max-width:1040px; margin:0 auto;}
+  .brand{display:flex; align-items:center; gap:10px; font-family:var(--serif); font-weight:600; font-size:19px; letter-spacing:-0.01em; text-decoration:none;}
+  .brand-logo{width:28px; height:28px; border-radius:8px; display:block; object-fit:cover;}
+  nav.links{display:flex; gap:28px; font-size:14.5px;}
+  nav.links a{text-decoration:none; color:var(--ink-soft); border-bottom:1px solid transparent; padding-bottom:2px; transition:border-color .15s ease, color .15s ease;}
+  nav.links a:hover{color:var(--ink); border-color:var(--ink);}
+  @media (max-width:640px){ nav.links{display:none;} }
+  .eyebrow{font-family:var(--mono); font-size:12.5px; letter-spacing:.09em; text-transform:uppercase; color:var(--accent-deep); font-weight:600; display:flex; align-items:center; gap:10px; margin-bottom:18px;}
+  .eyebrow::before{content:""; width:22px; height:1px; background:var(--accent-deep);}
+  h1{font-family:var(--serif); font-weight:600; font-size:clamp(34px, 5vw, 54px); line-height:1.04; letter-spacing:-0.015em; margin:0 0 22px;}
+  h1 em{font-style:italic; font-weight:500; color:var(--accent-deep);}
+  .hero{padding:76px 0 64px;}
+  .hero-grid{display:grid; grid-template-columns:1.05fr 0.95fr; gap:56px; align-items:center;}
+  @media (max-width:860px){ .hero-grid{grid-template-columns:1fr; gap:44px;} }
+  .lede{font-size:17px; color:var(--ink-soft); max-width:46ch; margin:0 0 34px;}
+  .cta-row{display:flex; flex-wrap:wrap; align-items:center; gap:18px;}
+  .badge-live{display:inline-flex; align-items:center; gap:10px; font-family:var(--mono); font-size:13.5px; font-weight:500; background:var(--ink); color:var(--paper); padding:12px 18px; border-radius:999px; text-decoration:none;}
+  .badge-live .dot{width:7px; height:7px; border-radius:50%; background:#E2B93B; box-shadow:0 0 0 3px rgba(226,185,59,0.25);}
+  .link-quiet{font-size:14.5px; text-decoration:underline; text-decoration-color:var(--rule); text-underline-offset:3px; color:var(--ink-soft);}
+  .link-quiet:hover{text-decoration-color:var(--ink);}
+  .small-note{font-family:var(--mono); font-size:12.5px; color:var(--ink-soft); margin-top:14px;}
+  .card-wrap{display:flex; justify-content:center;}
+  .scorecard{width:280px; background:#FCFBF6; color:var(--ink); border-radius:4px 4px 0 0; padding:22px 20px 18px; box-shadow:0 24px 60px -20px rgba(23,36,28,0.35), 0 2px 0 rgba(23,36,28,0.05); position:relative; font-family:var(--mono); font-size:12.5px; transform:rotate(-1.4deg);}
+  .scorecard::after{content:""; position:absolute; left:0; right:0; bottom:-9px; height:18px; background:linear-gradient(-45deg, #FCFBF6 8px, transparent 0), linear-gradient(45deg, #FCFBF6 8px, transparent 0); background-size:16px 16px; background-repeat:repeat-x;}
+  .receipt-head{text-align:center; margin-bottom:14px;}
+  .receipt-head .rname{font-family:var(--serif); font-weight:600; font-size:16px;}
+  .receipt-head .rsub{color:var(--ink-soft); font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; margin-top:2px;}
+  .rline{display:flex; justify-content:space-between; gap:10px; padding:6px 0; border-bottom:1px dashed var(--rule); opacity:0; transform:translateY(6px); animation:rline-in .5s ease forwards;}
+  .rline .rlabel{color:var(--ink-soft);}
+  .rline .ramt{font-weight:600;}
+  .rline .ramt.good{color:var(--good);} .rline .ramt.bad{color:var(--bad);}
+  .rline.total{border-bottom:none; border-top:2px solid var(--ink); margin-top:6px; padding-top:12px; font-weight:600;}
+  .rline:nth-child(2){animation-delay:.15s;} .rline:nth-child(3){animation-delay:.45s;} .rline:nth-child(4){animation-delay:.75s;} .rline:nth-child(5){animation-delay:1.05s;} .rline:nth-child(6){animation-delay:1.35s;} .rline:nth-child(7){animation-delay:1.75s;}
+  @keyframes rline-in{ to{ opacity:1; transform:translateY(0);} }
+  @media (prefers-reduced-motion:reduce){ .rline{animation:none; opacity:1; transform:none;} }
+  .section{padding:64px 0;}
+  .section-head{margin-bottom:36px; max-width:56ch;}
+  .section-head .eyebrow{margin-bottom:12px;}
+  h2{font-family:var(--serif); font-weight:600; font-size:clamp(24px,3vw,32px); letter-spacing:-0.01em; margin:0 0 10px;}
+  .section-head p{color:var(--ink-soft); margin:0; font-size:15.5px;}
+  .ledger{border-top:1px solid var(--ink);}
+  .row{display:grid; grid-template-columns:120px 1fr; gap:24px; padding:24px 0; border-bottom:1px solid var(--rule);}
+  @media (max-width:640px){ .row{grid-template-columns:1fr; gap:8px;} }
+  .row .code{font-family:var(--mono); font-size:12.5px; font-weight:600; color:var(--accent-deep); letter-spacing:.04em; padding-top:3px;}
+  .row .code .n{display:block; color:var(--ink-soft); font-weight:400; font-size:11px; margin-top:3px;}
+  .row h2, .row h3{font-family:var(--sans); font-weight:600; font-size:17px; margin:0 0 8px;}
+  .row p{margin:0 0 12px; color:var(--ink-soft); font-size:15px; max-width:66ch;}
+  .row p:last-child{margin-bottom:0;}
+  .row ul{margin:0 0 12px; padding-left:20px; color:var(--ink-soft); font-size:15px; max-width:66ch;}
+  .row ul li{margin-bottom:6px;}
+  .row a.inline{color:var(--accent-deep); text-decoration:underline; text-decoration-color:var(--rule); text-underline-offset:2px;}
+  .row a.inline:hover{text-decoration-color:var(--accent-deep);}
+  .page-head{padding:64px 0 40px;}
+  .page-head h1{font-size:clamp(30px, 4.2vw, 44px); margin:0 0 14px;}
+  .page-head .lede{font-size:16px; max-width:60ch; margin:0;}
+  .updated{font-family:var(--mono); font-size:12.5px; color:var(--ink-soft); margin-top:18px;}
+  .page-head + .section{padding-top:8px;}
+  .pricing-grid{display:grid; grid-template-columns:1fr 1fr; gap:20px; max-width:680px;}
+  @media (max-width:640px){ .pricing-grid{grid-template-columns:1fr;} }
+  .price-card{background:#FCFBF6; border:1px solid var(--rule); border-radius:var(--radius); padding:26px 24px;}
+  .price-card.featured{border-color:var(--accent-deep); box-shadow:0 12px 30px -14px rgba(46,125,79,0.35);}
+  .price-card .plan-name{font-weight:600; font-size:14px; color:var(--ink-soft); margin-bottom:6px;}
+  .price-card .plan-price{font-family:var(--serif); font-weight:600; font-size:32px; letter-spacing:-0.01em; margin-bottom:2px;}
+  .price-card .plan-price span{font-family:var(--sans); font-weight:500; font-size:14px; color:var(--ink-soft);}
+  .price-card .plan-note{font-size:13px; color:var(--ink-soft); margin:0;}
+  .price-card .save-tag{display:inline-block; font-family:var(--mono); font-size:11px; font-weight:600; color:var(--good); background:rgba(31,138,76,0.1); padding:3px 9px; border-radius:999px; margin-bottom:10px;}
+  .foot-small{font-size:13px; color:var(--ink-soft); margin-top:18px;}
+  .trust{background:var(--ink); color:var(--paper); padding:52px 0;}
+  .trust .wrap{display:grid; grid-template-columns:repeat(4,1fr); gap:28px;}
+  @media (max-width:760px){ .trust .wrap{grid-template-columns:repeat(2,1fr);} }
+  .trust-item .t-num{font-family:var(--mono); font-size:11px; color:#9FB8A8; letter-spacing:.08em; margin-bottom:8px;}
+  .trust-item p{margin:0; font-family:var(--serif); font-size:16.5px; line-height:1.35;}
+  footer{padding:44px 0 56px; border-top:1px solid var(--rule);}
+  .foot-row{display:flex; flex-wrap:wrap; justify-content:space-between; gap:20px; align-items:center;}
+  .foot-links{display:flex; flex-wrap:wrap; gap:22px; font-size:14px; color:var(--ink-soft);}
+  .foot-links a{text-decoration:none;}
+  .foot-links a:hover{text-decoration:underline;}
+  .copy{font-size:13px; color:var(--ink-soft); font-family:var(--mono);}
+
+</style>
+</head>
+<body>
+<header class="nav"><div class="nav-inner">
+<a class="brand" href="./"><img src="../logo.png" alt="Score Golf" class="brand-logo">Score Golf</a>
+<nav class="links"><a href="./">Inicio</a><a href="politica-de-privacidad.html">Privacidad</a><a href="soporte.html">Soporte</a><a href="../politique-confidentialite.html" lang="fr" hreflang="fr">Français</a><a href="../en/privacy-policy.html" lang="en" hreflang="en">English</a><a href="../de/datenschutz.html" lang="de" hreflang="de">Deutsch</a></nav>
+</div></header>
+<main>
+<section class="page-head"><div class="wrap">
+<div class="eyebrow">Privacidad</div><h1>Política de privacidad</h1>
+<p class="lede">Qué datos trata Score Golf, por qué, dónde se almacenan y cuáles son tus derechos.</p>
+<div class="updated">Última actualización — 12 de octubre de 2026</div></div></section>
+<section class="section"><div class="wrap"><div class="ledger">
+<div class="row"><div class="code">ART. 01<span class="n">Responsable</span></div><div>
+<p>Score Golf («la app», «nosotros») es una app de tarjeta de golf publicada por JB App. Esta política explica qué datos se tratan cuando usas la app, por qué, dónde se almacenan y cuáles son tus derechos.</p>
+<p>Editor: <strong>JB App</strong> (consulta el <a class="inline" href="../../mentions-legales.html">aviso legal</a>, en francés) — Contacto: <a class="inline" href="mailto:scoregolf@jb-app.fr">scoregolf@jb-app.fr</a></p>
+</div></div>
+<div class="row"><div class="code">ART. 02<span class="n">Datos recogidos</span></div><div>
+<p>La app solo trata los datos necesarios para su funcionamiento:</p>
+<ul>
+<li><strong>Cuenta</strong>: el inicio de sesión se hace exclusivamente con «Iniciar sesión con Apple». Recibimos el identificador de tu cuenta y, según tu elección en la ventana de Apple, tu correo electrónico (real o ocultado por Apple). No se crea ni se almacena ninguna contraseña.</li>
+<li><strong>Nombre</strong>: el nombre que introduces la primera vez que abres la app, para personalizar la pantalla de inicio.</li>
+<li><strong>Campos que añades</strong>: nombre del club, ciudad, posición GPS del campo, hoyos, salidas, CR y slope. Esta información se comparte con otros jugadores (véase el artículo 05).</li>
+<li><strong>Tus datos de juego</strong>: jugadores, partidas, resultados, putts, palos, distancias de los golpes. Se almacenan únicamente en tu iPhone.</li>
+</ul>
+<p>No recogemos ningún dato sin que lo sepas. La app no utiliza ningún rastreador publicitario, identificador publicitario ni análisis de comportamiento.</p>
+</div></div>
+<div class="row"><div class="code">ART. 03<span class="n">Ubicación y movimiento</span></div><div>
+<p><strong>Ubicación precisa</strong>: se utiliza mientras la app está abierta, para proponer el campo más cercano en la pantalla de inicio y medir distancias (golpes y distancia recorrida). <strong>Tu posición nunca se envía a nuestros servidores</strong>: la comparación con los campos se hace en tu iPhone y las distancias medidas permanecen en tus datos de juego locales.</p>
+<p><strong>Movimiento y forma física</strong>: el podómetro del iPhone sirve para confirmar que realmente caminas y evitar distancias falseadas. Estos datos se leen en tu iPhone y no se transmiten.</p>
+<p>Puedes denegar o retirar estos permisos en Ajustes; la app seguirá siendo utilizable para anotar resultados, pero la medición de distancias no funcionará.</p>
+</div></div>
+<div class="row"><div class="code">ART. 04<span class="n">Finalidad</span></div><div>
+<p>Los datos se utilizan únicamente para que la app funcione para ti: identificarte, mostrar y compartir campos, calcular tus resultados y estadísticas, generar tus exportaciones. Ningún dato se utiliza con fines publicitarios, de reventa o de elaboración de perfiles.</p>
+</div></div>
+<div class="row"><div class="code">ART. 05<span class="n">Campos compartidos</span></div><div>
+<p>Los campos son una base común alimentada por los usuarios: <strong>lo que añades es visible para todos los usuarios de la app</strong>. No introduzcas, por tanto, ninguna información personal.</p>
+<p>Para que solo el autor (o el administrador) pueda modificar un campo, se asocia al campo el identificador técnico de su cuenta. <strong>Si eliminas tu cuenta, tus campos no se eliminan: siguen a disposición de la comunidad y esa asociación se borra</strong>; dejan de estar vinculados a ti.</p>
+<p>¿Un campo contiene un error o información que te concierne? Escríbenos: lo corregiremos o lo retiraremos.</p>
+</div></div>
+<div class="row"><div class="code">ART. 06<span class="n">Compra integrada</span></div><div>
+<p>El desbloqueo de la app es una compra única gestionada por Apple. No recibimos ni tu medio de pago ni tus datos de facturación. La app solo recuerda, en tu iPhone, que el desbloqueo está activo y cuántas partidas gratuitas has usado.</p>
+</div></div>
+<div class="row"><div class="code">ART. 07<span class="n">Alojamiento</span></div><div>
+<p>Las cuentas y los campos compartidos están alojados en la infraestructura de <strong>Supabase</strong>, nuestro proveedor de base de datos y autenticación. Las comunicaciones están cifradas (HTTPS/TLS) y reglas de seguridad a nivel de base de datos (Row Level Security) controlan quién puede leer o modificar cada dato.</p>
+<p><strong>Acceso de administrador:</strong> JB App, como administrador técnico del proyecto, tiene acceso a los datos alojados, necesario para el mantenimiento, el soporte y la moderación de los campos. Este acceso no se utiliza con ningún otro fin.</p>
+<p><strong>Copia de seguridad en iCloud</strong>: cuando iCloud Drive está activado en tu iPhone, la app guarda automáticamente, al iniciarse y como máximo una vez cada 24 h, una copia de tus datos de juego en tu espacio personal de iCloud Drive (también puedes activarla manualmente). Esta copia te pertenece, la almacena Apple y no tenemos acceso a ella.</p>
+</div></div>
+<div class="row"><div class="code">ART. 08<span class="n">Comunicación a terceros</span></div><div>
+<p>Nunca vendemos, alquilamos ni compartimos tus datos con fines comerciales o publicitarios. Los datos de tu cuenta y los campos solo se transmiten a nuestro proveedor técnico (Supabase), encargado del tratamiento necesario para el funcionamiento del servicio, y la autenticación pasa por Apple.</p>
+</div></div>
+<div class="row"><div class="code">ART. 09<span class="n">Conservación y eliminación</span></div><div>
+<p>Los datos de la cuenta se conservan mientras exista tu cuenta. En cualquier momento puedes:</p>
+<ul>
+<li>eliminar tu cuenta directamente en la app: <strong>Perfil → Cuenta → Eliminar mi cuenta</strong>. Tu cuenta y tu perfil en línea se eliminan entonces de inmediato y de forma irreversible;</li>
+<li>exportar o restaurar tus datos de juego desde Perfil → Copia de seguridad;</li>
+<li>eliminar tus datos de juego locales desinstalando la app (salvo las copias en iCloud, que puedes eliminar en Perfil → Copia de seguridad o en iCloud Drive).</li>
+</ul>
+<p>También puedes retirar la autorización de inicio de sesión concedida a la app en Ajustes → tu nombre → Iniciar sesión con Apple.</p>
+</div></div>
+<div class="row"><div class="code">ART. 10<span class="n">Tus derechos</span></div><div>
+<p>De conformidad con la normativa aplicable en materia de protección de datos, tienes derecho de acceso, rectificación, portabilidad y supresión de tus datos. La eliminación y la exportación están disponibles directamente en la app; para cualquier otra solicitud, escribe a <a class="inline" href="mailto:scoregolf@jb-app.fr">scoregolf@jb-app.fr</a>.</p>
+</div></div>
+<div class="row"><div class="code">ART. 11<span class="n">Seguridad</span></div><div>
+<p>Aplicamos medidas técnicas razonables: conexiones cifradas, autenticación delegada en Apple, separación de los datos por usuario.</p>
+</div></div>
+<div class="row"><div class="code">ART. 12<span class="n">Menores</span></div><div>
+<p>La app no está destinada específicamente a niños y no recoge a sabiendas datos de menores sin el consentimiento de un padre, madre o tutor legal.</p>
+</div></div>
+<div class="row"><div class="code">ART. 13<span class="n">Modificaciones</span></div><div>
+<p>Esta política puede actualizarse si la app evoluciona. La fecha de la última actualización figura al principio de este documento.</p>
+</div></div>
+<div class="row"><div class="code">ART. 14<span class="n">Contacto</span></div><div>
+<p><strong>JB App</strong> — <a class="inline" href="mailto:scoregolf@jb-app.fr">scoregolf@jb-app.fr</a></p>
+</div></div>
+</div></div></section>
+</main>
+<footer><div class="wrap foot-row">
+<div class="foot-links"><a href="./">Inicio</a><a href="politica-de-privacidad.html">Política de privacidad</a><a href="soporte.html">Soporte</a><a href="../../mentions-legales.html">Aviso legal (FR)</a><a href="../politique-confidentialite.html" lang="fr" hreflang="fr">Français</a><a href="../en/privacy-policy.html" lang="en" hreflang="en">English</a><a href="../de/datenschutz.html" lang="de" hreflang="de">Deutsch</a><a href="mailto:scoregolf@jb-app.fr">scoregolf@jb-app.fr</a></div>
+<div class="copy">© 2026 JB App — Score Golf</div>
+</div></footer>
+</body>
+</html>
