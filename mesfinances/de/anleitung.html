@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html lang="de">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bedienungsanleitung — MesFinances</title>
+<meta name="description" content="Vollständige Bedienungsanleitung der App MesFinances: Übersicht, Buchungen, Wiederkehrend, Budget, Einstellungen.">
+<meta content="noindex" name="robots"/>
+<link href="https://jb-app.fr/mesfinances/mode-emploi.html" hreflang="fr" rel="alternate"/>
+<link href="https://jb-app.fr/mesfinances/en/user-guide.html" hreflang="en" rel="alternate"/>
+<link href="https://jb-app.fr/mesfinances/de/anleitung.html" hreflang="de" rel="alternate"/>
+<link href="https://jb-app.fr/mesfinances/it/guida.html" hreflang="it" rel="alternate"/>
+<link href="https://jb-app.fr/mesfinances/es/guia.html" hreflang="es" rel="alternate"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root{
+    --paper: #EEECE0;
+    --ink: #17241C;
+    --ink-soft: #4A5548;
+    --rule: #CFCABA;
+    --indigo: #5457E5;
+    --indigo-deep: #3E40B8;
+    --credit: #1F8A4C;
+    --serif: 'Fraunces', serif;
+    --sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, monospace;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:var(--sans); line-height:1.55; -webkit-font-smoothing:antialiased;
+    background-image:
+      linear-gradient(var(--paper), var(--paper)),
+      repeating-linear-gradient(180deg, transparent, transparent 37px, rgba(23,36,28,0.05) 38px);
+  }
+  a{color:inherit;}
+  .wrap{max-width:760px; margin:0 auto; padding:0 28px;}
+
+  header.nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(238,236,224,0.86); backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--rule);
+  }
+  .nav-inner{display:flex; align-items:center; justify-content:space-between; padding:16px 28px; max-width:1040px; margin:0 auto;}
+  .brand{display:flex; align-items:center; gap:10px; font-family:var(--serif); font-weight:600; font-size:19px; letter-spacing:-0.01em; text-decoration:none;}
+  .brand-logo{width:28px; height:28px; border-radius:8px; display:block; object-fit:cover;}
+
+  .page-head{padding:56px 0 8px;}
+  .eyebrow{
+    font-family:var(--mono); font-size:12.5px; letter-spacing:.09em; text-transform:uppercase;
+    color:var(--indigo-deep); font-weight:600; display:flex; align-items:center; gap:10px; margin-bottom:18px;
+  }
+  .eyebrow::before{content:""; width:22px; height:1px; background:var(--indigo-deep);}
+  h1{
+    font-family:var(--serif); font-weight:600; font-size:clamp(30px, 4.2vw, 44px);
+    line-height:1.08; letter-spacing:-0.015em; margin:0 0 14px;
+  }
+  .page-head .lede{font-size:16px; color:var(--ink-soft); max-width:60ch; margin:0 0 8px;}
+  .version-tag{font-family:var(--mono); font-size:12px; color:var(--ink-soft);}
+
+  /* Sommaire */
+  .toc{
+    margin:34px 0 8px; padding:20px 22px; background:#FCFBF6; border:1px solid var(--rule); border-radius:12px;
+  }
+  .toc-title{font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:10px;}
+  .toc ol{margin:0; padding-left:0; list-style:none; columns:2; column-gap:24px;}
+  .toc li{font-size:14px; margin-bottom:6px; break-inside:avoid;}
+  .toc a{text-decoration:none; color:var(--ink);}
+  .toc a:hover{text-decoration:underline;}
+  @media (max-width:560px){ .toc ol{columns:1;} }
+
+  section.chapter{padding:44px 0 8px; border-top:1px solid var(--rule); margin-top:36px;}
+  section.chapter:first-of-type{border-top:none;}
+  h2{
+    font-family:var(--serif); font-weight:600; font-size:24px; letter-spacing:-0.01em; margin:0 0 18px;
+    scroll-margin-top:80px;
+  }
+  h3{font-family:var(--sans); font-weight:600; font-size:15.5px; margin:26px 0 8px; color:var(--indigo-deep);}
+  p{margin:0 0 14px; font-size:15px; color:var(--ink); }
+  ul{margin:0 0 14px; padding-left:20px;}
+  ul li{margin-bottom:8px; font-size:15px;}
+
+  .tip, .warn{
+    display:flex; gap:10px; align-items:flex-start;
+    border-radius:10px; padding:12px 16px; margin:16px 0; font-size:14px;
+  }
+  .tip{background:rgba(84,87,229,0.08); color:var(--indigo-deep);}
+  .warn{background:rgba(192,57,43,0.08); color:#8C2E22;}
+  .tip .glyph, .warn .glyph{flex-shrink:0; font-size:16px; line-height:1.4;}
+  .example{
+    font-style:italic; color:var(--ink-soft); font-size:14px; border-left:2px solid var(--rule);
+    padding-left:14px; margin:12px 0;
+  }
+
+  .back-top{
+    display:inline-block; margin-top:8px; font-family:var(--mono); font-size:12px;
+    color:var(--ink-soft); text-decoration:none;
+  }
+  .back-top:hover{color:var(--ink);}
+
+  footer{padding:48px 0 56px; margin-top:40px; border-top:1px solid var(--rule);}
+  .foot-row{display:flex; flex-wrap:wrap; justify-content:space-between; gap:20px; align-items:center; max-width:1040px; margin:0 auto; padding:0 28px;}
+  .foot-links{display:flex; gap:22px; font-size:14px; color:var(--ink-soft);}
+  .foot-links a{text-decoration:none;}
+  .foot-links a:hover{text-decoration:underline;}
+  .copy{font-size:13px; color:var(--ink-soft); font-family:var(--mono);}
+</style>
+</head>
+<body>
+<header class="nav">
+<div class="nav-inner">
+<a class="brand" href="../en/"><img alt="MesFinances" class="brand-logo" src="../logo.png"/>MesFinances</a>
+</div>
+</header>
+<div class="wrap" id="top">
+<div class="page-head">
+<div class="eyebrow">Documentation</div>
+<h1>Bedienungsanleitung</h1>
+<p class="lede">Die vollständige Anleitung zur App, Bildschirm für Bildschirm.</p>
+<div class="version-tag">Version 1.0.3</div>
+<div class="version-tag" style="margin-top:6px"><a href="https://jb-app.fr/mesfinances/mode-emploi.html" hreflang="fr" lang="fr" style="color:inherit">Français</a> · <a href="https://jb-app.fr/mesfinances/en/user-guide.html" hreflang="en" lang="en" style="color:inherit">English</a> · <strong>Deutsch</strong> · <a href="https://jb-app.fr/mesfinances/it/guida.html" hreflang="it" lang="it" style="color:inherit">Italiano</a> · <a href="https://jb-app.fr/mesfinances/es/guia.html" hreflang="es" lang="es" style="color:inherit">Español</a></div>
+</div>
+<nav aria-label="Inhalt" class="toc">
+<div class="toc-title">Inhalt</div>
+<ol>
+<li><a href="#login">1. Anmelden</a></li>
+<li><a href="#home">2. Übersicht (Start)</a></li>
+<li><a href="#txns">3. Buchungen</a></li>
+<li><a href="#add">4. Eine Buchung hinzufügen</a></li>
+<li><a href="#recurring">5. Wiederkehrend (Wiederk.)</a></li>
+<li><a href="#budget">6. Budget</a></li>
+<li><a href="#settings">7. Einstellungen</a></li>
+<li><a href="#tips">8. Tipps und Ratschläge</a></li>
+<li><a href="#help">9. Wenn etwas nicht funktioniert</a></li>
+</ol>
+</nav>
+<section class="chapter" id="login">
+<h2>1. Anmelden</h2>
+<p>Beim ersten Start fordert die App dich auf, dich mit einer E-Mail-Adresse und einem Passwort anzumelden.</p>
+<ul>
+<li>Du hast bereits ein Konto: Gib deine E-Mail-Adresse und dein Passwort ein und tippe auf „Anmelden“.</li>
+<li>Konto erstellen: Wechsle zu „Konto erstellen“, wenn du noch keine Zugangsdaten hast.</li>
+<li>Passwort vergessen: Tippe auf den entsprechenden Link, um eine E-Mail zum Zurücksetzen zu erhalten.</li>
+</ul>
+<div class="tip"><span class="glyph">💡</span><span>Nach der Anmeldung bleibst du etwa 1 Stunde angemeldet, ohne deine Zugangsdaten erneut einzugeben. Danach ist eine erneute Anmeldung nötig.</span></div>
+<p>Auf jedem Tab kannst du außerdem über das kleine 👤-Symbol oben links deine E-Mail-Adresse sehen und dich jederzeit abmelden, ohne über die Einstellungen zu gehen.</p>
+<a class="back-top" href="#top">↑ Nach oben</a>
+</section>
+<section class="chapter" id="home">
+<h2>2. Übersicht (Start)</h2>
+<p>Der erste Tab bietet einen Überblick über deine Finanzen.</p>
+<h3>Erinnerung an die Sicherung</h3>
+<p>Wurde seit 8 Tagen (oder noch nie) eine JSON-Sicherung erstellt, erscheint oben ein orangefarbenes Banner mit der Schaltfläche „Speichern“ – ein Tipp genügt, um den Export zu starten und zu teilen (siehe Abschnitt Einstellungen).</p>
+<h3>Anstehende Fälligkeiten</h3>
+<p>Ist eine wiederkehrende Buchung in den nächsten 8 Tagen fällig (oder überfällig), erscheint sie hier: 🔴 überfällig, 🟠 in 3 Tagen oder weniger, 🟡 später.</p>
+<h3>Bank / Bereich</h3>
+<p>Eine Reihe von Auswahlfeldern filtert die darunter angezeigten Zahlen: „Alle“ oder eine bzw. mehrere Banken. Tippe zum Auswählen, tippe erneut zum Abwählen.</p>
+<div class="tip"><span class="glyph">💡</span><span>Bankgruppen (🔗) werden hier nicht angeboten – du findest sie im Empfänger-Ranking weiter unten und im Tab Budget.</span></div>
+<h3>Gesamtsaldo und geprüfter Saldo</h3>
+<ul>
+<li><strong>Gesamtsaldo</strong>: Anfangssaldo + alle erfassten Buchungen.</li>
+<li><strong>Geprüfter Saldo</strong>: Anfangssaldo + nur die Buchungen, die du als geprüft abgehakt hast.</li>
+</ul>
+<h3>Salden ausblenden</h3>
+<p>Tippe oben rechts in der Übersicht auf das Auge 👁: Das Auge wird durchgestrichen und die Salden (gesamt, geprüft und pro Bank) werden durch Sternchen „****“ ersetzt. Tippe erneut, um sie wieder anzuzeigen. Deine Wahl bleibt beim nächsten Öffnen der App erhalten.</p>
+<div class="tip"><span class="glyph">💡</span><span>Praktisch, wenn du die App in öffentlichen Verkehrsmitteln oder vor anderen Personen nutzt.</span></div>
+<h3>Empfänger-Ranking</h3>
+<p>Top 10 der ausgewählten Empfänger (siehe Einstellungen), verglichen über 3 Jahre. Mit „Sortieren nach“ wählst du, auf welchem der 3 Jahre das Ranking beruht (standardmäßig das laufende Jahr, außer im Januar: Dann beginnt die App mangels Daten automatisch mit dem Vorjahr). Eine Bank-/Gruppenauswahl beschränkt das Ranking auf einen bestimmten Bereich. Die Schaltfläche „Ranking exportieren (PDF)“ erstellt ein teilbares Dokument mit Angabe des Ranking-Jahres. Dieses Dokument enthält die Top 30.</p>
+<h3>Empfänger suchen</h3>
+<p>Tippe ein paar Buchstaben, um einen Empfänger zu finden und die letzte Buchung sowie die Gesamtausgaben pro Jahr zu sehen.</p>
+<h3>Saldo nach Bank</h3>
+<p>Saldodetails (gesamt und geprüft) für jede Bank im oben gewählten Bereich.</p>
+<a class="back-top" href="#top">↑ Nach oben</a>
+</section>
+<section class="chapter" id="txns">
+<h2>3. Buchungen</h2>
+<p>Dieser Tab listet alle deine Buchungen auf, mit Suche, Filtern und Schnellaktionen.</p>
+<h3>Suchen und filtern</h3>
+<p>Die Suchleiste filtert nach Empfänger, Kategorie oder Notizen. Das Symbol ⊚ öffnet ein eigenes Filterblatt: Zeitraum (alle / pro Monat / pro Jahr / benutzerdefiniert), Bank, Budgetcode, Zahlungsart, Kategorie, Prüfstatus, Anhang.</p>
+<div class="tip"><span class="glyph">💡</span><span>Die Schaltfläche „Filter löschen“ setzt alles mit einem Tipp zurück.</span></div>
+<h3>Eine Buchungskarte</h3>
+<ul>
+<li>Der Kreis links (⬜/✅) markiert die Buchung als „geprüft“ oder hebt die Markierung auf.</li>
+<li>Der Betrag ist rot (Ausgabe) oder grün (Einnahme).</li>
+<li>Die drei Symbole unter der Zeile: Stift (bearbeiten), zwei Blätter (duplizieren), Papierkorb (löschen).</li>
+<li>Du kannst die Zeile auch <strong>nach links wischen</strong>: Eine rote Schaltfläche „Löschen“ erscheint. Vor dem endgültigen Löschen wird eine Bestätigung verlangt.</li>
+</ul>
+<h3>Eine Buchung duplizieren</h3>
+<p>Das Symbol „Duplizieren“ bietet zwei Möglichkeiten:</p>
+<ul>
+<li><strong>In Buchungen</strong>: erstellt eine bearbeitbare Kopie der Buchung (gleiches Datum, gleicher Betrag), die du anschließend anpassen kannst.</li>
+<li><strong>In Wiederkehrende</strong>: öffnet das Formular für wiederkehrende Buchungen, vorausgefüllt mit den Angaben der Buchung – praktisch, um eine einmalige Ausgabe in ein regelmäßiges Abo umzuwandeln.</li>
+</ul>
+<div class="tip"><span class="glyph">💡</span><span>Beim Duplizieren „In Wiederkehrende“ wird das Feld Notizen der Buchung (nicht das der wiederkehrenden Buchung) zum Namen der wiederkehrenden Buchung – praktisch, wenn der Empfänger allein die Buchung nicht eindeutig beschreibt. (Siehe 8. Tipps und Ratschläge)</span></div>
+<h3>Mehrfachauswahl</h3>
+<p>Mit der Schaltfläche „Auswählen“ kannst du mehrere Buchungen abhaken und auf einmal löschen.</p>
+<h3>Exportieren</h3>
+<p>Im Filterblatt kannst du die aktuelle gefilterte Auswahl über zwei Schaltflächen exportieren: „PDF erstellen“ oder „Als CSV exportieren“.</p>
+<a class="back-top" href="#top">↑ Nach oben</a>
+</section>
+<section class="chapter" id="add">
+<h2>4. Eine Buchung hinzufügen</h2>
+<p>Die Schaltfläche „+“ oben öffnet ein Formular: Datum (standardmäßig heute), Empfänger, Kategorie, Bank und Zahlungsart, Betrag (Soll oder Haben), Budgetcode, Notizen, Dokumente. Nur <strong>Bank</strong> und <strong>Zahlungsart</strong> sind Pflichtfelder.</p>
+<p>Jedes Feld mit Suche ermöglicht es auch, direkt einen neuen Eintrag anzulegen, falls der gesuchte noch nicht existiert.</p>
+<div class="tip"><span class="glyph">💡</span><span>Gib im Suchfeld die Bezeichnung ein: Existiert sie, erscheint sie in der Liste. Andernfalls scrolle ans Ende der Liste: Dort wartet ein Bereich „Neuen Eintrag erstellen“ mit einem eigenen Feld „Name…“ (der im Suchfeld eingegebene Text wird nicht automatisch übernommen).</span></div>
+<h3>Dokumente</h3>
+<p>Mit MesFinances kannst du Belege oder wichtige Dokumente als PDF aufbewahren. Du kannst auch ein Foto aufnehmen oder eines aus deiner Mediathek auswählen.</p>
+<div class="tip"><span class="glyph">💡</span><span>Der Bereich Dokument erscheint, sobald die in den Einstellungen festgelegte Schwelle erreicht ist.</span></div>
+<a class="back-top" href="#top">↑ Nach oben</a>
+</section>
+<section class="chapter" id="recurring">
+<h2>5. Wiederkehrend (Wiederk.)</h2>
+<p>Dieser Tab verwaltet die regelmäßig wiederkehrenden Buchungen: Abos, Gehalt, Miete usw.</p>
+<h3>Hinweisbanner</h3>
+<p>Oben eine Übersicht der nahen oder überfälligen Fälligkeiten in den nächsten 8 Tagen.</p>
+<h3>Eine Karte für wiederkehrende Buchungen</h3>
+<p>Jede Karte zeigt den Namen, die Häufigkeit (monatlich, zweimonatlich, vierteljährlich, halbjährlich, jährlich oder festes Datum), den Status (aktiv/inaktiv), den Betrag und die nächste Fälligkeit, die automatisch berechnet wird.</p>
+<ul>
+<li><strong>Aktivieren / Deaktivieren</strong>: Eine inaktive wiederkehrende Buchung erscheint weder in den Hinweisen noch bei den Fälligkeiten.</li>
+<li><strong>Bearbeiten</strong>: öffnet das Bearbeitungsformular.</li>
+<li><strong>Duplizieren</strong>: erstellt eine inaktive Kopie, praktisch für ein ähnliches Abo.</li>
+<li><strong>Buchen</strong>: erstellt sofort die entsprechende Buchung zum vorgesehenen Datum und verschiebt die nächste Fälligkeit.</li>
+<li><strong>Papierkorb</strong> (oben rechts auf der Karte oder nach links wischen): löscht endgültig.</li>
+</ul>
+<div class="tip"><span class="glyph">💡</span><span>Wähle bei monatlicher Häufigkeit den Tag des Monats (oder „Monatsende“). Gib bei Zyklen (zweimonatlich, vierteljährlich, halbjährlich) zusätzlich einen Referenzmonat an, der den richtigen Rhythmus bestimmt. Bei festem Datum oder jährlicher Häufigkeit wählst du einfach das Datum.</span></div>
+<a class="back-top" href="#top">↑ Nach oben</a>
+</section>
+<section class="chapter" id="budget">
+<h2>6. Budget</h2>
+<p>Verfolgung deiner budgetierten Ausgaben.</p>
+<h3>Zeitraum</h3>
+<p>Wechsle zwischen „Pro Monat“ und „Pro Jahr“.</p>
+<h3>Banken</h3>
+<p>Filtere nach Bank oder nach Bankgruppe (Symbol 🔗, wählt die ganze Gruppe mit einem Tipp aus). Die Aufschlüsselung nach Kategorie (ein- oder ausblendbar) zeigt, wie sich die Ausgaben auf die Kategorien jedes Codes verteilen.</p>
+<h3>Übersichtskarten</h3>
+<p>„Ausgewählte Budgets“ summiert die ausgewählten Budgetcodes (siehe Einstellungen) für den gewählten Bereich.</p>
+<h3>Budgetcode-Karte</h3>
+<p>Der eingegebene Betrag ist immer das Monatsbudget – im Modus „Pro Jahr“ zeigt die App den Wert mal 12 an.</p>
+<ul>
+<li><strong>Obere Zeile</strong>: Ausgaben des laufenden Zeitraums im Vergleich zum vorherigen, mit prozentualer Veränderung.</li>
+<li><strong>Zeile „Budget“</strong>: informative Summe für den Zeitraum, mit dem Nutzungsgrad (grün/orange/rot je nach Überschreitung).</li>
+<li><strong>Feld „Monatsbudget“</strong>: Hier gibst du das Budget ein oder änderst es – immer als Monatswert.</li>
+</ul>
+<div class="tip"><span class="glyph">💡</span><span>Mit einer Bankgruppe (Symbol 🔗) kannst du mehrere Banken (im Sinne der App MesFinances) zusammenfassen. Eine solche Gruppe besteht oft aus deiner Hauptbank, eventuell ergänzt um eine Kreditkarte mit verzögerter Abbuchung und eine Geldbörse (Bargeld).</span></div>
+<div class="tip"><span class="glyph">💡</span><span>Mit den ausgewählten Budgets behältst du dein Budget im Griff, ohne von rein technischen Codes (interne Umbuchungen zwischen Banken) gestört zu werden.</span></div>
+<a class="back-top" href="#top">↑ Nach oben</a>
+</section>
+<section class="chapter" id="settings">
+<h2>7. Einstellungen</h2>
+<h3>Konto</h3>
+<p>Zeigt deine E-Mail-Adresse und ermöglicht es, dich abzumelden oder dein Konto zu löschen.</p>
+<div class="warn"><span class="glyph">⚠️</span><span>Vor jeder Löschung musst du zur Bestätigung das Wort LÖSCHEN eingeben, um Fehler zu vermeiden.</span></div>
+<p>Du kannst dein Abo verwalten und die Datenschutzerklärung lesen.</p>
+<h3>Datenverwaltung</h3>
+<p><strong>💾 JSON-Sicherung</strong> — Exportiert alle deine Daten (Banken, Buchungen, wiederkehrende Buchungen usw.) in eine Datei, die du speichern kannst, wo du möchtest (Dateien, E-Mail usw.). Die Wiederherstellung importiert eine Sicherungsdatei.</p>
+<div class="warn"><span class="glyph">⚠️</span><span>Die Wiederherstellung ERSETZT alle aktuellen Daten. Dies kann nicht rückgängig gemacht werden – erstelle vor dem Wiederherstellen immer eine aktuelle Sicherung.</span></div>
+<p><strong>📥 CSV-Import</strong> — Importiert eine CSV-Datei (zum Beispiel aus Numbers oder Excel exportiert oder von der App selbst). Erkannte Spalten: DATE, PAYEE (Empfänger), CATEGORY (Kategorie), BANK, METHOD (Zahlungsart), DEBIT, CREDIT, CODE (Budgetcode); die französischen Spaltennamen (BENEFICIAIRE, NATURE, BANQUE, MOYEN) werden ebenfalls akzeptiert. Datumsangaben im Format TT/MM/JJJJ oder JJJJ-MM-TT. Unbekannte Werte (Empfänger, Kategorie, Bank, Zahlungsart, Code) werden automatisch angelegt. Zwei Modi: „Hinzufügen“ (ergänzt deine vorhandenen Daten) oder „Ersetzen“ (löscht vor dem Import alles).</p>
+<p><strong>📦 Archivierung / Löschen</strong> — Exportiert die Buchungen eines Jahres (oder aller Jahre) und/oder einer Bank als CSV und löscht sie anschließend – der Anfangssaldo der Bank wird automatisch neu berechnet, damit der aktuelle Saldo gleich bleibt. In der „Gefahrenzone“ kannst du außerdem alle Buchungen einer Bank direkt löschen, ohne Export.</p>
+<p><strong>📎 Angehängtes Dokument</strong> — Gib eine Schwelle ein: Ab diesem Betrag bietet die App an, der Buchung ein Dokument (Foto oder PDF) anzuhängen. Bei 0 ist die Funktion deaktiviert.</p>
+<div class="tip"><span class="glyph">💡</span><span>Bei größeren Anschaffungen findest du den Beleg über die verschiedenen Suchfunktionen leicht wieder.</span></div>
+<p><strong>💱 Währung</strong> — Wähle die Währung für alle Beträge in der App (Salden, Buchungen, Budget, Exporte): Euro, Schweizer Franken, Kanadischer Dollar, US-Dollar oder Britisches Pfund. Die Option <strong>Währung auf dem App-Symbol anzeigen</strong> fügt das Symbol deiner Währung unter der Eule auf dem Home-Bildschirm deines iPhone hinzu; ist sie deaktiviert, behält die App ihr neutrales Symbol. iOS zeigt bei jeder Änderung des Symbols eine Bestätigung an. Der Preis des Premium-Abos wird separat vom App Store in deiner Landeswährung verwaltet.</p>
+<h3>Stammdaten</h3>
+<p>Jede Tabelle (Banken, Bankgruppen, Empfänger, Kategorien, Zahlungsarten, Budgetcodes) hat einen eigenen Bildschirm: suchen, hinzufügen, bearbeiten (nach links wischen oder auf die Zeile tippen), löschen (nach links wischen, dann „Löschen“). Vor dem endgültigen Löschen wird eine Bestätigung verlangt.</p>
+<div class="tip"><span class="glyph">💡</span><span>Beim Anlegen einer neuen Bank musst du den Anfangssaldo eingeben; so stimmt er mit deinem tatsächlichen Kontostand überein.</span></div>
+<p><strong>🔒 Auswahlsperre</strong> — Bei Empfängern und Budgetcodes bestimmt ein Häkchen, ob sie im Ranking der Übersicht bzw. im Budget erscheinen. Diese Auswahl ist standardmäßig gesperrt (🔒), um versehentliche Änderungen zu vermeiden – tippe auf „🔓 Auswahl bearbeiten“, um sie zu entsperren, setze oder entferne Häkchen und tippe dann auf „🔒 Fertig“.</p>
+<h3>Duplikate zusammenführen</h3>
+<p>In den 5 Stammdatentabellen kannst du mit der Schaltfläche „🔀 Zusammenführen“ Duplikate vereinen: Hake die zusammenzuführenden Einträge ab, wähle den zu behaltenden (das Ziel) und bestätige. Alle betroffenen Buchungen und wiederkehrenden Buchungen werden automatisch dem Ziel zugeordnet, und die Duplikate werden gelöscht.</p>
+<div class="tip"><span class="glyph">💡</span><span>Bei Banken wird der Anfangssaldo der Duplikate zu dem des Ziels addiert, damit beim Zusammenführen kein Betrag verloren geht.</span></div>
+<a class="back-top" href="#top">↑ Nach oben</a>
+</section>
+<section class="chapter" id="tips">
+<h2>8. Tipps und Ratschläge</h2>
+<ul>
+<li><strong>Nach oben</strong>: Der kleine Pfeil ⬆ oben rechts auf jedem Bildschirm bringt dich sofort zum Anfang der Liste zurück.</li>
+<li><strong>Wischen zum Handeln</strong>: In den meisten Listen bietet das Wischen einer Zeile nach links Bearbeiten/Löschen an.</li>
+<li><strong>Nach unten ziehen</strong>: Ziehe auf jedem Listenbildschirm nach unten, um die neuesten Daten zu laden.</li>
+<li><strong>Tastatur schließen</strong>: Über der Tastatur erscheint eine Schaltfläche ✕; in Listen schließt auch das Scrollen die Tastatur automatisch.</li>
+<li><strong>Teilen</strong>: Jeder Export (PDF, CSV, JSON) öffnet das übliche Teilen-Menü des iPhone – wähle Mail, Dateien, AirDrop, Nachrichten usw.</li>
+</ul>
+<h3>Eine Buchung duplizieren</h3>
+<div class="tip"><span class="glyph">💡</span><span>Beim Duplizieren „In Wiederkehrende“ wird das Feld Notizen der Buchung (nicht das der wiederkehrenden Buchung) zum Namen der wiederkehrenden Buchung.</span></div>
+<div class="example">Beispiel: Du kaufst Apps im App Store, der Empfänger ist also Apple. Im Feld Notizen gibst du den Namen der App ein, und er wird automatisch als Name der wiederkehrenden Buchung übernommen. So weißt du auch Monate später noch, wofür die wiederkehrende Abbuchung ist.</div>
+<h3>Banken</h3>
+<div class="tip"><span class="glyph">💡</span><span>Mit einer Bankgruppe (Symbol 🔗) kannst du mehrere Banken (im Sinne der App MesFinances) zusammenfassen. Eine solche Gruppe besteht oft aus deiner Hauptbank, eventuell ergänzt um eine Kreditkarte mit verzögerter Abbuchung und eine Geldbörse (Bargeld).</span></div>
+<h3>Warum eine Bank „Karte mit verzögerter Abbuchung“ oder „Bargeld“ anlegen?</h3>
+<p>Bei einer Karte mit verzögerter Abbuchung werden die Einkäufe des Monats auf einmal am Monatsende abgebucht. Erfasst du jeden Einkauf direkt auf deiner Bank, zählst du ihn doppelt: einmal beim Kauf und noch einmal bei der Sammelabbuchung.</p>
+<p><strong>Die Lösung</strong>: Lege eine eigene Bank an, zum Beispiel <strong>KARTE</strong>, und erfasse deine Einkäufe laufend auf dieser Bank.</p>
+<p>Wenn am Monatsende die Sammelabbuchung auf deiner echten Bank eingeht, erfasst du zwei Buchungen:</p>
+<ul>
+<li>eine <strong>Ausgabe</strong> auf deiner echten Bank (der abgebuchte Gesamtbetrag)</li>
+<li>eine <strong>Einnahme</strong> in gleicher Höhe auf deiner Bank KARTE (um sie wieder auf null zu bringen)</li>
+</ul>
+<div class="example">Beispiel: Du hast im März 320 mit deiner Karte ausgegeben, verteilt auf 8 Einkäufe. Jeder Einkauf wird laufend auf der Bank „KARTE“ erfasst. Am 31. März bucht deine echte Bank 320 auf einmal ab: Du erfasst −320 auf deiner echten Bank und +320 auf „KARTE“, um sie wieder auf null zu bringen. Dasselbe Prinzip gilt für eine Geldbörse „Bargeld“ für deine Barausgaben.</div>
+<a class="back-top" href="#top">↑ Nach oben</a>
+</section>
+<section class="chapter" id="help">
+<h2>9. Wenn etwas nicht funktioniert</h2>
+<ul>
+<li><strong>Eine Fehlermeldung wird angezeigt</strong>: Lies sie, sie gibt meist genau an, was fehlgeschlagen ist (Verbindung, fehlende Daten…).</li>
+<li><strong>Bildschirm hängt oder bleibt beim Laden leer</strong>: Ziehe nach unten, um neu zu laden, oder beende die App vollständig und starte sie neu.</li>
+<li><strong>Daten scheinen zu fehlen</strong>: Prüfe die aktiven Filter auf dem betreffenden Bildschirm (Symbol ⊚ bei Buchungen, Bankauswahl bei Budget/Übersicht).</li>
+<li><strong>Vor jedem Vorgang, der Daten löscht</strong> (JSON-Wiederherstellung, Ersetzen per CSV-Import, Archivierung): Erstelle eine JSON-Sicherung.</li>
+</ul>
+<a class="back-top" href="#top">↑ Nach oben</a>
+</section>
+</div>
+<footer>
+<div class="foot-row">
+<div class="foot-links">
+<a href="../en/">Startseite (EN)</a>
+<a href="../en/privacy-policy.html">Datenschutzerklärung (EN)</a>
+<a href="../mode-emploi.html" hreflang="fr" lang="fr">Français</a>
+<a href="mailto:mesfinances@jb-app.fr">mesfinances@jb-app.fr</a>
+</div>
+<div class="copy">© 2026 JB App — MesFinances</div>
+</div>
+</footer>
+</body>
+</html>

@@ -1,7 +1,11 @@
 User-agent: *
 Allow: /
-Disallow: /mode-emploi.html
-Disallow: /en/user-guide.html
+# Modes d'emploi MesFinances : réservés aux utilisateurs de l'app
+Disallow: /mesfinances/mode-emploi.html
+Disallow: /mesfinances/en/user-guide.html
+Disallow: /mesfinances/de/anleitung.html
+Disallow: /mesfinances/it/guida.html
+Disallow: /mesfinances/es/guia.html
 Disallow: /email-confirme.html
 
 Sitemap: https://jb-app.fr/sitemap.xml

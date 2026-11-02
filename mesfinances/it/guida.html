@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Guida utente — MesFinances</title>
+<meta name="description" content="Guida completa all'app MesFinances: panoramica, transazioni, ricorrenti, budget, impostazioni.">
+<meta content="noindex" name="robots"/>
+<link href="https://jb-app.fr/mesfinances/mode-emploi.html" hreflang="fr" rel="alternate"/>
+<link href="https://jb-app.fr/mesfinances/en/user-guide.html" hreflang="en" rel="alternate"/>
+<link href="https://jb-app.fr/mesfinances/de/anleitung.html" hreflang="de" rel="alternate"/>
+<link href="https://jb-app.fr/mesfinances/it/guida.html" hreflang="it" rel="alternate"/>
+<link href="https://jb-app.fr/mesfinances/es/guia.html" hreflang="es" rel="alternate"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root{
+    --paper: #EEECE0;
+    --ink: #17241C;
+    --ink-soft: #4A5548;
+    --rule: #CFCABA;
+    --indigo: #5457E5;
+    --indigo-deep: #3E40B8;
+    --credit: #1F8A4C;
+    --serif: 'Fraunces', serif;
+    --sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, monospace;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:var(--sans); line-height:1.55; -webkit-font-smoothing:antialiased;
+    background-image:
+      linear-gradient(var(--paper), var(--paper)),
+      repeating-linear-gradient(180deg, transparent, transparent 37px, rgba(23,36,28,0.05) 38px);
+  }
+  a{color:inherit;}
+  .wrap{max-width:760px; margin:0 auto; padding:0 28px;}
+
+  header.nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(238,236,224,0.86); backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--rule);
+  }
+  .nav-inner{display:flex; align-items:center; justify-content:space-between; padding:16px 28px; max-width:1040px; margin:0 auto;}
+  .brand{display:flex; align-items:center; gap:10px; font-family:var(--serif); font-weight:600; font-size:19px; letter-spacing:-0.01em; text-decoration:none;}
+  .brand-logo{width:28px; height:28px; border-radius:8px; display:block; object-fit:cover;}
+
+  .page-head{padding:56px 0 8px;}
+  .eyebrow{
+    font-family:var(--mono); font-size:12.5px; letter-spacing:.09em; text-transform:uppercase;
+    color:var(--indigo-deep); font-weight:600; display:flex; align-items:center; gap:10px; margin-bottom:18px;
+  }
+  .eyebrow::before{content:""; width:22px; height:1px; background:var(--indigo-deep);}
+  h1{
+    font-family:var(--serif); font-weight:600; font-size:clamp(30px, 4.2vw, 44px);
+    line-height:1.08; letter-spacing:-0.015em; margin:0 0 14px;
+  }
+  .page-head .lede{font-size:16px; color:var(--ink-soft); max-width:60ch; margin:0 0 8px;}
+  .version-tag{font-family:var(--mono); font-size:12px; color:var(--ink-soft);}
+
+  /* Sommaire */
+  .toc{
+    margin:34px 0 8px; padding:20px 22px; background:#FCFBF6; border:1px solid var(--rule); border-radius:12px;
+  }
+  .toc-title{font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:10px;}
+  .toc ol{margin:0; padding-left:0; list-style:none; columns:2; column-gap:24px;}
+  .toc li{font-size:14px; margin-bottom:6px; break-inside:avoid;}
+  .toc a{text-decoration:none; color:var(--ink);}
+  .toc a:hover{text-decoration:underline;}
+  @media (max-width:560px){ .toc ol{columns:1;} }
+
+  section.chapter{padding:44px 0 8px; border-top:1px solid var(--rule); margin-top:36px;}
+  section.chapter:first-of-type{border-top:none;}
+  h2{
+    font-family:var(--serif); font-weight:600; font-size:24px; letter-spacing:-0.01em; margin:0 0 18px;
+    scroll-margin-top:80px;
+  }
+  h3{font-family:var(--sans); font-weight:600; font-size:15.5px; margin:26px 0 8px; color:var(--indigo-deep);}
+  p{margin:0 0 14px; font-size:15px; color:var(--ink); }
+  ul{margin:0 0 14px; padding-left:20px;}
+  ul li{margin-bottom:8px; font-size:15px;}
+
+  .tip, .warn{
+    display:flex; gap:10px; align-items:flex-start;
+    border-radius:10px; padding:12px 16px; margin:16px 0; font-size:14px;
+  }
+  .tip{background:rgba(84,87,229,0.08); color:var(--indigo-deep);}
+  .warn{background:rgba(192,57,43,0.08); color:#8C2E22;}
+  .tip .glyph, .warn .glyph{flex-shrink:0; font-size:16px; line-height:1.4;}
+  .example{
+    font-style:italic; color:var(--ink-soft); font-size:14px; border-left:2px solid var(--rule);
+    padding-left:14px; margin:12px 0;
+  }
+
+  .back-top{
+    display:inline-block; margin-top:8px; font-family:var(--mono); font-size:12px;
+    color:var(--ink-soft); text-decoration:none;
+  }
+  .back-top:hover{color:var(--ink);}
+
+  footer{padding:48px 0 56px; margin-top:40px; border-top:1px solid var(--rule);}
+  .foot-row{display:flex; flex-wrap:wrap; justify-content:space-between; gap:20px; align-items:center; max-width:1040px; margin:0 auto; padding:0 28px;}
+  .foot-links{display:flex; gap:22px; font-size:14px; color:var(--ink-soft);}
+  .foot-links a{text-decoration:none;}
+  .foot-links a:hover{text-decoration:underline;}
+  .copy{font-size:13px; color:var(--ink-soft); font-family:var(--mono);}
+</style>
+</head>
+<body>
+<header class="nav">
+<div class="nav-inner">
+<a class="brand" href="../en/"><img alt="MesFinances" class="brand-logo" src="../logo.png"/>MesFinances</a>
+</div>
+</header>
+<div class="wrap" id="top">
+<div class="page-head">
+<div class="eyebrow">Documentation</div>
+<h1>Guida utente</h1>
+<p class="lede">La guida completa all'app, schermata per schermata.</p>
+<div class="version-tag">Version 1.0.3</div>
+<div class="version-tag" style="margin-top:6px"><a href="https://jb-app.fr/mesfinances/mode-emploi.html" hreflang="fr" lang="fr" style="color:inherit">Français</a> · <a href="https://jb-app.fr/mesfinances/en/user-guide.html" hreflang="en" lang="en" style="color:inherit">English</a> · <a href="https://jb-app.fr/mesfinances/de/anleitung.html" hreflang="de" lang="de" style="color:inherit">Deutsch</a> · <strong>Italiano</strong> · <a href="https://jb-app.fr/mesfinances/es/guia.html" hreflang="es" lang="es" style="color:inherit">Español</a></div>
+</div>
+<nav aria-label="Sommario" class="toc">
+<div class="toc-title">Sommario</div>
+<ol>
+<li><a href="#login">1. Accedere</a></li>
+<li><a href="#home">2. Panoramica (Home)</a></li>
+<li><a href="#txns">3. Transazioni (Movim.)</a></li>
+<li><a href="#add">4. Aggiungere una transazione</a></li>
+<li><a href="#recurring">5. Ricorrenti (Ricorr.)</a></li>
+<li><a href="#budget">6. Budget</a></li>
+<li><a href="#settings">7. Impostazioni</a></li>
+<li><a href="#tips">8. Suggerimenti e consigli</a></li>
+<li><a href="#help">9. In caso di problemi</a></li>
+</ol>
+</nav>
+<section class="chapter" id="login">
+<h2>1. Accedere</h2>
+<p>Al primo avvio, l'app ti chiede di accedere con un indirizzo e-mail e una password.</p>
+<ul>
+<li>Hai già un account: inserisci e-mail e password, poi tocca «Accedi».</li>
+<li>Crea un account: passa a «Crea un account» se non hai ancora delle credenziali.</li>
+<li>Password dimenticata: tocca il link dedicato per ricevere un'e-mail di reimpostazione.</li>
+</ul>
+<div class="tip"><span class="glyph">💡</span><span>Dopo l'accesso resti connesso per circa 1 ora senza reinserire le credenziali. Trascorso questo tempo, è necessario accedere di nuovo.</span></div>
+<p>Inoltre, su ogni scheda, una piccola icona 👤 in alto a sinistra ti permette di vedere la tua e-mail e di uscire in qualsiasi momento, senza passare dalle Impostazioni.</p>
+<a class="back-top" href="#top">↑ Torna su</a>
+</section>
+<section class="chapter" id="home">
+<h2>2. Panoramica (Home)</h2>
+<p>La prima scheda offre una visione d'insieme delle tue finanze.</p>
+<h3>Promemoria di backup</h3>
+<p>Se non è stato fatto alcun backup JSON da 8 giorni (o mai), in alto compare un banner arancione con il pulsante «Salva»: basta un tocco per avviare l'esportazione e condividerla (vedi la sezione Impostazioni).</p>
+<h3>Scadenze in arrivo</h3>
+<p>Se un'operazione ricorrente scade nei prossimi 8 giorni (o è in ritardo), compare qui: 🔴 in ritardo, 🟠 entro 3 giorni, 🟡 oltre.</p>
+<h3>Banca / Ambito</h3>
+<p>Una fila di pulsanti filtra le cifre mostrate sotto: «Tutte» oppure una o più banche. Tocca per selezionare, tocca di nuovo per deselezionare.</p>
+<div class="tip"><span class="glyph">💡</span><span>I gruppi di banche (🔗) non sono proposti qui: li trovi nella Classifica beneficiari più in basso e nella scheda Budget.</span></div>
+<h3>Saldo totale e saldo verificato</h3>
+<ul>
+<li><strong>Saldo totale</strong>: saldo iniziale + tutte le operazioni registrate.</li>
+<li><strong>Saldo verificato</strong>: saldo iniziale + solo le operazioni che hai spuntato come verificate.</li>
+</ul>
+<h3>Nascondere i saldi</h3>
+<p>Tocca l'occhio 👁 in alto a destra della Panoramica: l'occhio viene barrato e i saldi (totale, verificato e per banca) vengono sostituiti da asterischi «****». Tocca di nuovo per mostrarli. La tua scelta viene mantenuta alla successiva apertura dell'app.</p>
+<div class="tip"><span class="glyph">💡</span><span>Comodo quando usi l'app sui mezzi pubblici o davanti ad altre persone.</span></div>
+<h3>Classifica beneficiari</h3>
+<p>Top 10 dei beneficiari selezionati (vedi Impostazioni), a confronto su 3 anni. Il selettore «Classifica per» ti permette di scegliere su quale dei 3 anni si basa la classifica (di default l'anno in corso, tranne a gennaio, quando l'app parte automaticamente dall'anno precedente, per mancanza di dati sufficienti). Un selettore banca/gruppo limita la classifica a un ambito preciso. Il pulsante «Esporta la classifica (PDF)» genera un documento pronto da condividere, con l'indicazione dell'anno di classifica. Questo documento elenca i primi 30.</p>
+<h3>Cercare un beneficiario</h3>
+<p>Digita qualche lettera per trovare un beneficiario e vedere l'ultima transazione e il totale delle spese per anno.</p>
+<h3>Saldo per banca</h3>
+<p>Dettaglio dei saldi (totale e verificato) per ogni banca dell'ambito selezionato sopra.</p>
+<a class="back-top" href="#top">↑ Torna su</a>
+</section>
+<section class="chapter" id="txns">
+<h2>3. Transazioni (Movim.)</h2>
+<p>Questa scheda elenca tutte le tue operazioni, con ricerca, filtri e azioni rapide.</p>
+<h3>Cercare e filtrare</h3>
+<p>La barra di ricerca filtra per beneficiario, categoria o note. L'icona ⊚ apre una scheda di filtri dedicata: periodo (tutto / per mese / per anno / periodo personalizzato), banca, codice budget, metodo di pagamento, categoria, stato di verifica, allegato.</p>
+<div class="tip"><span class="glyph">💡</span><span>Il pulsante «Cancella i filtri» azzera tutto con un tocco.</span></div>
+<h3>Una scheda transazione</h3>
+<ul>
+<li>Il cerchio a sinistra (⬜/✅) spunta o toglie la spunta «verificata» alla transazione.</li>
+<li>L'importo è rosso (spesa) o verde (entrata).</li>
+<li>Le tre icone sotto la riga: matita (modifica), due fogli (duplica), cestino (elimina).</li>
+<li>Puoi anche <strong>far scorrere la riga verso sinistra</strong>: compare un pulsante rosso «Elimina». Prima dell'eliminazione definitiva viene chiesta una conferma.</li>
+</ul>
+<h3>Duplicare un'operazione</h3>
+<p>L'icona «duplica» propone due opzioni:</p>
+<ul>
+<li><strong>In Transazioni</strong>: crea una copia modificabile della transazione (stessa data, stesso importo), da adattare in seguito.</li>
+<li><strong>In Ricorrenti</strong>: apre il modulo Ricorrenti precompilato con i dati della transazione, comodo per trasformare una spesa occasionale in un abbonamento ricorrente.</li>
+</ul>
+<div class="tip"><span class="glyph">💡</span><span>Quando duplichi «In Ricorrenti», è il campo Note della transazione (non quello della ricorrente) a diventare il nome dell'operazione ricorrente: comodo se il solo beneficiario non basta a distinguere l'operazione. (Vedi 8. Suggerimenti e consigli)</span></div>
+<h3>Selezione multipla</h3>
+<p>Il pulsante «Seleziona» permette di spuntare più transazioni per eliminarle in una volta.</p>
+<h3>Esportare</h3>
+<p>Nella scheda dei filtri, due pulsanti permettono di esportare la selezione filtrata corrente: «Genera PDF» o «Esporta in CSV».</p>
+<a class="back-top" href="#top">↑ Torna su</a>
+</section>
+<section class="chapter" id="add">
+<h2>4. Aggiungere una transazione</h2>
+<p>Il pulsante «+» in alto apre un modulo: data (oggi di default), beneficiario, categoria, banca e metodo, importo (uscita o entrata), codice budget, note, documenti. Sono obbligatori solo <strong>banca</strong> e <strong>metodo</strong>.</p>
+<p>Ogni campo con ricerca permette anche di creare al volo un nuovo elemento, se quello che cerchi non esiste ancora.</p>
+<div class="tip"><span class="glyph">💡</span><span>Nella zona di ricerca, digita la descrizione: se esiste, compare nell'elenco. Altrimenti scorri fino in fondo all'elenco: ti aspetta una zona «Crea un nuovo elemento», con il proprio campo «Nome…» (il testo digitato nella ricerca non viene ripreso automaticamente).</span></div>
+<h3>Documenti</h3>
+<p>MesFinances ti permette di conservare ricevute o documenti importanti in PDF. Puoi anche scattare una foto o sceglierne una dalla libreria.</p>
+<div class="tip"><span class="glyph">💡</span><span>La zona Documento compare se viene raggiunta la soglia impostata nella scheda Impostazioni.</span></div>
+<a class="back-top" href="#top">↑ Torna su</a>
+</section>
+<section class="chapter" id="recurring">
+<h2>5. Ricorrenti (Ricorr.)</h2>
+<p>Questa scheda gestisce le operazioni che si ripetono regolarmente: abbonamenti, stipendio, affitto, ecc.</p>
+<h3>Banner di avviso</h3>
+<p>In alto, un riepilogo delle scadenze vicine o in ritardo, nei prossimi 8 giorni.</p>
+<h3>Una scheda ricorrente</h3>
+<p>Ogni scheda mostra il nome, la frequenza (mensile, bimestrale, trimestrale, semestrale, annuale o data fissa), lo stato (attiva/inattiva), l'importo e la prossima scadenza, calcolata automaticamente.</p>
+<ul>
+<li><strong>Attiva / Disattiva</strong>: un'operazione ricorrente inattiva non compare più negli avvisi né nelle scadenze.</li>
+<li><strong>Modifica</strong>: apre il modulo di modifica.</li>
+<li><strong>Duplica</strong>: crea una copia inattiva, comoda per un abbonamento simile.</li>
+<li><strong>Registra</strong>: crea subito la transazione corrispondente alla data prevista e fa avanzare la prossima scadenza.</li>
+<li><strong>Cestino</strong> (in alto a destra della scheda, o scorrendo verso sinistra): elimina definitivamente.</li>
+</ul>
+<div class="tip"><span class="glyph">💡</span><span>Per una frequenza mensile, scegli il giorno del mese (o «fine mese»). Per i cicli (bimestrale, trimestrale, semestrale), indica anche un mese di riferimento che determina il ritmo corretto. Per una data fissa o una frequenza annuale, scegli semplicemente la data.</span></div>
+<a class="back-top" href="#top">↑ Torna su</a>
+</section>
+<section class="chapter" id="budget">
+<h2>6. Budget</h2>
+<p>Monitoraggio delle spese a budget.</p>
+<h3>Periodo</h3>
+<p>Passa da «Per mese» a «Per anno».</p>
+<h3>Banche</h3>
+<p>Filtra per banca o per gruppo di banche (icona 🔗, seleziona l'intero gruppo con un tocco). Il dettaglio per categoria (che puoi mostrare o nascondere) indica come le spese si ripartiscono tra le categorie di ogni codice.</p>
+<h3>Schede di riepilogo</h3>
+<p>«Budget selezionati» somma i codici budget selezionati (vedi Impostazioni) per l'ambito scelto.</p>
+<h3>Scheda codice budget</h3>
+<p>L'importo da inserire è sempre il budget mensile: in modalità «Per anno», l'app mostra il valore moltiplicato per 12.</p>
+<ul>
+<li><strong>Riga superiore</strong>: spese del periodo in corso, a confronto con il periodo precedente, con la variazione percentuale.</li>
+<li><strong>Riga «Budget»</strong>: totale informativo del periodo, con la percentuale di utilizzo (verde/arancione/rosso a seconda del superamento).</li>
+<li><strong>Campo «Budget mensile»</strong>: qui inserisci o modifichi il budget, sempre come valore mensile.</li>
+</ul>
+<div class="tip"><span class="glyph">💡</span><span>Un gruppo di banche (icona 🔗) permette di consolidare più banche (nel senso dell'app MesFinances). Un gruppo di questo tipo è spesso composto dalla tua banca principale, eventualmente associata a una carta di credito con addebito differito e a un portafoglio (Contanti).</span></div>
+<div class="tip"><span class="glyph">💡</span><span>I budget selezionati ti permettono di gestire bene il budget senza essere disturbato da codici puramente tecnici (giroconti interni tra banche).</span></div>
+<a class="back-top" href="#top">↑ Torna su</a>
+</section>
+<section class="chapter" id="settings">
+<h2>7. Impostazioni</h2>
+<h3>Account</h3>
+<p>Mostra la tua e-mail e permette di uscire o di eliminare l'account.</p>
+<div class="warn"><span class="glyph">⚠️</span><span>Prima di qualsiasi eliminazione è richiesta una conferma digitando la parola ELIMINA, per evitare errori.</span></div>
+<p>Puoi gestire il tuo abbonamento e consultare l'informativa sulla privacy.</p>
+<h3>Gestione dei dati</h3>
+<p><strong>💾 Backup JSON</strong> — Esporta tutti i tuoi dati (banche, transazioni, ricorrenti, ecc.) in un file che puoi salvare dove vuoi (File, e-mail, ecc.). Il ripristino reimporta un file di backup.</p>
+<div class="warn"><span class="glyph">⚠️</span><span>Il ripristino SOSTITUISCE tutti i dati attuali. Azione irreversibile: fai sempre un backup recente prima di ripristinare.</span></div>
+<p><strong>📥 Importazione CSV</strong> — Importa un file CSV (ad esempio esportato da Numbers o Excel, oppure dall'app stessa). Colonne riconosciute: DATE, PAYEE (beneficiario), CATEGORY (categoria), BANK (banca), METHOD (metodo), DEBIT, CREDIT, CODE (codice budget); sono accettate anche le intestazioni francesi (BENEFICIAIRE, NATURE, BANQUE, MOYEN). Date nel formato GG/MM/AAAA o AAAA-MM-GG. I valori sconosciuti (beneficiario, categoria, banca, metodo, codice) vengono creati automaticamente. Due modalità: «Aggiungi» (completa i dati esistenti) o «Sostituisci» (cancella tutto prima di importare).</p>
+<p><strong>📦 Archiviazione / Eliminazione</strong> — Permette di esportare in CSV e poi eliminare le transazioni di un anno (o di tutti gli anni) e/o di una banca: il saldo iniziale della banca viene ricalcolato automaticamente, così il saldo attuale non cambia. La «Zona pericolosa» permette anche di eliminare direttamente tutte le transazioni di una banca, senza esportazione.</p>
+<p><strong>📎 Documento allegato</strong> — Inserisci la soglia: a partire da quell'importo, l'app propone di allegare un documento (foto o PDF) alla transazione. Lascia 0 per disattivare.</p>
+<div class="tip"><span class="glyph">💡</span><span>Per gli acquisti importanti, la ricevuta si ritrova facilmente grazie alle diverse funzioni di ricerca.</span></div>
+<p><strong>💱 Valuta</strong> — Scegli la valuta usata per tutti gli importi dell'app (saldi, transazioni, budget, esportazioni): euro, franco svizzero, dollaro canadese, dollaro statunitense o sterlina britannica. L'opzione <strong>Mostra la valuta sull'icona dell'app</strong> aggiunge il simbolo della tua valuta sotto il gufo, nella schermata Home dell'iPhone; se è disattivata, l'app mantiene la sua icona neutra. iOS mostra un messaggio di conferma a ogni cambio di icona. Il prezzo dell'abbonamento Premium è gestito separatamente dall'App Store, nella tua valuta locale.</p>
+<h3>Dati di riferimento</h3>
+<p>Ogni tabella (Banche, Gruppi di banche, Beneficiari, Categorie, Metodi di pagamento, Codici budget) ha la propria schermata: ricerca, aggiunta, modifica (scorri verso sinistra o tocca la riga), eliminazione (scorri verso sinistra, poi «Elimina»). Prima dell'eliminazione definitiva viene chiesta una conferma.</p>
+<div class="tip"><span class="glyph">💡</span><span>Nella schermata di inserimento di una nuova banca devi indicare il saldo iniziale: così corrisponde al saldo reale del tuo conto.</span></div>
+<p><strong>🔒 Blocco della selezione</strong> — Per Beneficiari e Codici budget, una casella determina se compaiono nella classifica della Panoramica o nel Budget. Questa selezione è bloccata di default (🔒) per evitare modifiche accidentali: tocca «🔓 Modifica selezione» per sbloccarla, spunta o togli la spunta, poi tocca «🔒 Fatto».</p>
+<h3>Unire i duplicati</h3>
+<p>Nelle 5 tabelle di riferimento, il pulsante «🔀 Unisci» permette di riunire i duplicati: spunta le voci da unire, scegli quella da tenere (la destinazione) e conferma. Tutte le transazioni e le ricorrenti interessate vengono collegate automaticamente alla destinazione, e i duplicati vengono eliminati.</p>
+<div class="tip"><span class="glyph">💡</span><span>Per le banche, il saldo iniziale dei duplicati viene aggiunto a quello della destinazione, così nell'unione non si perde alcun importo.</span></div>
+<a class="back-top" href="#top">↑ Torna su</a>
+</section>
+<section class="chapter" id="tips">
+<h2>8. Suggerimenti e consigli</h2>
+<ul>
+<li><strong>Torna su</strong>: la piccola freccia ⬆ in alto a destra di ogni schermata ti riporta subito all'inizio dell'elenco.</li>
+<li><strong>Scorrere per agire</strong>: nella maggior parte degli elenchi, far scorrere una riga verso sinistra propone modifica/eliminazione.</li>
+<li><strong>Tirare verso il basso</strong>: su qualsiasi schermata con un elenco, tira verso il basso per ricaricare i dati più recenti.</li>
+<li><strong>Chiudere la tastiera</strong>: sopra la tastiera compare un pulsante ✕; negli elenchi, anche lo scorrimento chiude automaticamente la tastiera.</li>
+<li><strong>Condividere</strong>: ogni esportazione (PDF, CSV, JSON) apre il normale menu di condivisione dell'iPhone: scegli Mail, File, AirDrop, Messaggi, ecc.</li>
+</ul>
+<h3>Duplicare un'operazione</h3>
+<div class="tip"><span class="glyph">💡</span><span>Quando duplichi «In Ricorrenti», è il campo Note della transazione (non quello della ricorrente) a diventare il nome dell'operazione ricorrente.</span></div>
+<div class="example">Esempio: acquisti app sull'App Store, quindi il beneficiario è Apple. Nel campo Note inserisci il nome dell'app, che viene ripreso automaticamente come nome dell'operazione ricorrente. Così, anche dopo qualche mese, ti ricordi facilmente a cosa corrisponde l'addebito ricorrente.</div>
+<h3>Banche</h3>
+<div class="tip"><span class="glyph">💡</span><span>Un gruppo di banche (icona 🔗) permette di consolidare più banche (nel senso dell'app MesFinances). Un gruppo di questo tipo è spesso composto dalla tua banca principale, eventualmente associata a una carta di credito con addebito differito e a un portafoglio (Contanti).</span></div>
+<h3>Perché creare una banca «Carta ad addebito differito» o «Contanti»?</h3>
+<p>Con una carta ad addebito differito, gli acquisti del mese vengono addebitati in un'unica volta, a fine mese. Se registri ogni acquisto direttamente sulla tua banca, li conteggi due volte: una al momento dell'acquisto e una all'addebito cumulativo.</p>
+<p><strong>La soluzione</strong>: crea una banca dedicata, ad esempio <strong>CARTA</strong>, e registra man mano i tuoi acquisti su questa banca.</p>
+<p>A fine mese, quando l'addebito cumulativo arriva sulla tua banca reale, registra due operazioni:</p>
+<ul>
+<li>una <strong>spesa</strong> sulla tua banca reale (l'importo totale addebitato)</li>
+<li>un'<strong>entrata</strong> dello stesso importo sulla banca CARTA (per riportarla a zero)</li>
+</ul>
+<div class="example">Esempio: a marzo hai speso 320 con la carta, in 8 acquisti. Ogni acquisto viene registrato man mano sulla banca «CARTA». Il 31 marzo la tua banca reale addebita 320 in un'unica volta: registri −320 sulla banca reale e +320 su «CARTA» per riportarla a zero. Lo stesso principio vale per un portafoglio Contanti per le spese in contanti.</div>
+<a class="back-top" href="#top">↑ Torna su</a>
+</section>
+<section class="chapter" id="help">
+<h2>9. In caso di problemi</h2>
+<ul>
+<li><strong>Viene mostrato un messaggio di errore</strong>: leggilo, di solito indica con precisione cosa non ha funzionato (connessione, dato mancante…).</li>
+<li><strong>Schermata bloccata o vuota al caricamento</strong>: tira verso il basso per ricaricare, oppure chiudi completamente l'app e riaprila.</li>
+<li><strong>Dati che sembrano mancare</strong>: controlla i filtri attivi nella schermata interessata (icona ⊚ in Transazioni, selettore di banca in Budget/Panoramica).</li>
+<li><strong>Prima di qualsiasi operazione distruttiva</strong> (ripristino JSON, sostituzione tramite importazione CSV, archiviazione): fai un backup JSON.</li>
+</ul>
+<a class="back-top" href="#top">↑ Torna su</a>
+</section>
+</div>
+<footer>
+<div class="foot-row">
+<div class="foot-links">
+<a href="../en/">Home (EN)</a>
+<a href="../en/privacy-policy.html">Informativa sulla privacy (EN)</a>
+<a href="../mode-emploi.html" hreflang="fr" lang="fr">Français</a>
+<a href="mailto:mesfinances@jb-app.fr">mesfinances@jb-app.fr</a>
+</div>
+<div class="copy">© 2026 JB App — MesFinances</div>
+</div>
+</footer>
+</body>
+</html>

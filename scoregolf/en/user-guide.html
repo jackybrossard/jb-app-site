@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User guide — Score Golf</title>
+<link rel="canonical" href="https://jb-app.fr/scoregolf/en/user-guide.html">
+<meta name="description" content="Playing with friends and want some real stakes? Try Score Golf. Keep all your scorecards, follow your stats round after round and measure your progress over the period of your choice. Just like the pros!">
+<link rel="alternate" hreflang="fr" href="https://jb-app.fr/scoregolf/mode-d-emploi.html"><link rel="alternate" hreflang="en" href="https://jb-app.fr/scoregolf/en/user-guide.html"><link rel="alternate" hreflang="es" href="https://jb-app.fr/scoregolf/es/guia-de-uso.html"><link rel="alternate" hreflang="it" href="https://jb-app.fr/scoregolf/it/guida.html"><link rel="alternate" hreflang="de" href="https://jb-app.fr/scoregolf/de/anleitung.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EEECE0; --ink:#17241C; --ink-soft:#4A5548; --rule:#CFCABA;
+    --accent:#2E7D4F; --accent-deep:#1E5E3A; --bad:#C0392B; --good:#1F8A4C;
+    --radius:14px;
+    --serif:'Fraunces', serif;
+    --sans:'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --mono:'IBM Plex Mono', ui-monospace, SFMono-Regular, monospace;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:var(--sans); line-height:1.55; -webkit-font-smoothing:antialiased;
+    background-image:linear-gradient(var(--paper), var(--paper)), repeating-linear-gradient(180deg, transparent, transparent 37px, rgba(23,36,28,0.05) 38px);}
+  a{color:inherit;}
+  .wrap{max-width:1040px; margin:0 auto; padding:0 28px;}
+  header.nav{position:sticky; top:0; z-index:50; background:rgba(238,236,224,0.86); backdrop-filter:blur(8px); border-bottom:1px solid var(--rule);}
+  .nav-inner{display:flex; align-items:center; justify-content:space-between; padding:16px 28px; max-width:1040px; margin:0 auto;}
+  .brand{display:flex; align-items:center; gap:10px; font-family:var(--serif); font-weight:600; font-size:19px; letter-spacing:-0.01em; text-decoration:none;}
+  .brand-logo{width:28px; height:28px; border-radius:8px; display:block; object-fit:cover;}
+  nav.links{display:flex; gap:28px; font-size:14.5px;}
+  nav.links a{text-decoration:none; color:var(--ink-soft); border-bottom:1px solid transparent; padding-bottom:2px; transition:border-color .15s ease, color .15s ease;}
+  nav.links a:hover{color:var(--ink); border-color:var(--ink);}
+  @media (max-width:640px){ nav.links{display:none;} }
+  .eyebrow{font-family:var(--mono); font-size:12.5px; letter-spacing:.09em; text-transform:uppercase; color:var(--accent-deep); font-weight:600; display:flex; align-items:center; gap:10px; margin-bottom:18px;}
+  .eyebrow::before{content:""; width:22px; height:1px; background:var(--accent-deep);}
+  h1{font-family:var(--serif); font-weight:600; font-size:clamp(34px, 5vw, 54px); line-height:1.04; letter-spacing:-0.015em; margin:0 0 22px;}
+  h1 em{font-style:italic; font-weight:500; color:var(--accent-deep);}
+  .hero{padding:76px 0 64px;}
+  .hero-grid{display:grid; grid-template-columns:1.05fr 0.95fr; gap:56px; align-items:center;}
+  @media (max-width:860px){ .hero-grid{grid-template-columns:1fr; gap:44px;} }
+  .lede{font-size:17px; color:var(--ink-soft); max-width:46ch; margin:0 0 34px;}
+  .cta-row{display:flex; flex-wrap:wrap; align-items:center; gap:18px;}
+  .badge-live{display:inline-flex; align-items:center; gap:10px; font-family:var(--mono); font-size:13.5px; font-weight:500; background:var(--ink); color:var(--paper); padding:12px 18px; border-radius:999px; text-decoration:none;}
+  .badge-live .dot{width:7px; height:7px; border-radius:50%; background:#E2B93B; box-shadow:0 0 0 3px rgba(226,185,59,0.25);}
+  .link-quiet{font-size:14.5px; text-decoration:underline; text-decoration-color:var(--rule); text-underline-offset:3px; color:var(--ink-soft);}
+  .link-quiet:hover{text-decoration-color:var(--ink);}
+  .small-note{font-family:var(--mono); font-size:12.5px; color:var(--ink-soft); margin-top:14px;}
+  .card-wrap{display:flex; justify-content:center;}
+  .scorecard{width:280px; background:#FCFBF6; color:var(--ink); border-radius:4px 4px 0 0; padding:22px 20px 18px; box-shadow:0 24px 60px -20px rgba(23,36,28,0.35), 0 2px 0 rgba(23,36,28,0.05); position:relative; font-family:var(--mono); font-size:12.5px; transform:rotate(-1.4deg);}
+  .scorecard::after{content:""; position:absolute; left:0; right:0; bottom:-9px; height:18px; background:linear-gradient(-45deg, #FCFBF6 8px, transparent 0), linear-gradient(45deg, #FCFBF6 8px, transparent 0); background-size:16px 16px; background-repeat:repeat-x;}
+  .receipt-head{text-align:center; margin-bottom:14px;}
+  .receipt-head .rname{font-family:var(--serif); font-weight:600; font-size:16px;}
+  .receipt-head .rsub{color:var(--ink-soft); font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; margin-top:2px;}
+  .rline{display:flex; justify-content:space-between; gap:10px; padding:6px 0; border-bottom:1px dashed var(--rule); opacity:0; transform:translateY(6px); animation:rline-in .5s ease forwards;}
+  .rline .rlabel{color:var(--ink-soft);}
+  .rline .ramt{font-weight:600;}
+  .rline .ramt.good{color:var(--good);} .rline .ramt.bad{color:var(--bad);}
+  .rline.total{border-bottom:none; border-top:2px solid var(--ink); margin-top:6px; padding-top:12px; font-weight:600;}
+  .rline:nth-child(2){animation-delay:.15s;} .rline:nth-child(3){animation-delay:.45s;} .rline:nth-child(4){animation-delay:.75s;} .rline:nth-child(5){animation-delay:1.05s;} .rline:nth-child(6){animation-delay:1.35s;} .rline:nth-child(7){animation-delay:1.75s;}
+  @keyframes rline-in{ to{ opacity:1; transform:translateY(0);} }
+  @media (prefers-reduced-motion:reduce){ .rline{animation:none; opacity:1; transform:none;} }
+  .section{padding:64px 0;}
+  .section-head{margin-bottom:36px; max-width:56ch;}
+  .section-head .eyebrow{margin-bottom:12px;}
+  h2{font-family:var(--serif); font-weight:600; font-size:clamp(24px,3vw,32px); letter-spacing:-0.01em; margin:0 0 10px;}
+  .section-head p{color:var(--ink-soft); margin:0; font-size:15.5px;}
+  .ledger{border-top:1px solid var(--ink);}
+  .row{display:grid; grid-template-columns:120px 1fr; gap:24px; padding:24px 0; border-bottom:1px solid var(--rule);}
+  @media (max-width:640px){ .row{grid-template-columns:1fr; gap:8px;} }
+  .row .code{font-family:var(--mono); font-size:12.5px; font-weight:600; color:var(--accent-deep); letter-spacing:.04em; padding-top:3px;}
+  .row .code .n{display:block; color:var(--ink-soft); font-weight:400; font-size:11px; margin-top:3px;}
+  .row h2, .row h3{font-family:var(--sans); font-weight:600; font-size:17px; margin:0 0 8px;}
+  .row p{margin:0 0 12px; color:var(--ink-soft); font-size:15px; max-width:66ch;}
+  .row p:last-child{margin-bottom:0;}
+  .row ul{margin:0 0 12px; padding-left:20px; color:var(--ink-soft); font-size:15px; max-width:66ch;}
+  .row ul li{margin-bottom:6px;}
+  .row a.inline{color:var(--accent-deep); text-decoration:underline; text-decoration-color:var(--rule); text-underline-offset:2px;}
+  .row a.inline:hover{text-decoration-color:var(--accent-deep);}
+  .page-head{padding:64px 0 40px;}
+  .page-head h1{font-size:clamp(30px, 4.2vw, 44px); margin:0 0 14px;}
+  .page-head .lede{font-size:16px; max-width:60ch; margin:0;}
+  .updated{font-family:var(--mono); font-size:12.5px; color:var(--ink-soft); margin-top:18px;}
+  .page-head + .section{padding-top:8px;}
+  .pricing-grid{display:grid; grid-template-columns:1fr 1fr; gap:20px; max-width:680px;}
+  @media (max-width:640px){ .pricing-grid{grid-template-columns:1fr;} }
+  .price-card{background:#FCFBF6; border:1px solid var(--rule); border-radius:var(--radius); padding:26px 24px;}
+  .price-card.featured{border-color:var(--accent-deep); box-shadow:0 12px 30px -14px rgba(46,125,79,0.35);}
+  .price-card .plan-name{font-weight:600; font-size:14px; color:var(--ink-soft); margin-bottom:6px;}
+  .price-card .plan-price{font-family:var(--serif); font-weight:600; font-size:32px; letter-spacing:-0.01em; margin-bottom:2px;}
+  .price-card .plan-price span{font-family:var(--sans); font-weight:500; font-size:14px; color:var(--ink-soft);}
+  .price-card .plan-note{font-size:13px; color:var(--ink-soft); margin:0;}
+  .price-card .save-tag{display:inline-block; font-family:var(--mono); font-size:11px; font-weight:600; color:var(--good); background:rgba(31,138,76,0.1); padding:3px 9px; border-radius:999px; margin-bottom:10px;}
+  .foot-small{font-size:13px; color:var(--ink-soft); margin-top:18px;}
+  .trust{background:var(--ink); color:var(--paper); padding:52px 0;}
+  .trust .wrap{display:grid; grid-template-columns:repeat(4,1fr); gap:28px;}
+  @media (max-width:760px){ .trust .wrap{grid-template-columns:repeat(2,1fr);} }
+  .trust-item .t-num{font-family:var(--mono); font-size:11px; color:#9FB8A8; letter-spacing:.08em; margin-bottom:8px;}
+  .trust-item p{margin:0; font-family:var(--serif); font-size:16.5px; line-height:1.35;}
+  footer{padding:44px 0 56px; border-top:1px solid var(--rule);}
+  .foot-row{display:flex; flex-wrap:wrap; justify-content:space-between; gap:20px; align-items:center;}
+  .foot-links{display:flex; flex-wrap:wrap; gap:22px; font-size:14px; color:var(--ink-soft);}
+  .foot-links a{text-decoration:none;}
+  .foot-links a:hover{text-decoration:underline;}
+  .copy{font-size:13px; color:var(--ink-soft); font-family:var(--mono);}
+
+
+.guide-img{float:right; width:190px; margin:0 0 14px 28px; border-radius:22px; border:1px solid var(--rule); box-shadow:0 14px 34px -16px rgba(23,36,28,.45); display:block;}
+@media (max-width:640px){ .guide-img{float:none; margin:6px auto 16px; width:200px;} }
+.row::after{content:""; display:block; clear:both;}
+.toc{display:flex; flex-wrap:wrap; gap:8px 18px; margin:0 0 8px; padding:0; list-style:none; font-size:14.5px;}
+.toc a{color:var(--accent-deep); text-decoration:none; border-bottom:1px solid var(--rule);}
+.pdf-btn{display:inline-block; margin-top:22px; font-family:var(--mono); font-size:13.5px; font-weight:500; background:var(--ink); color:var(--paper); padding:12px 18px; border-radius:999px; text-decoration:none;}
+@media print{
+  header.nav, footer, .pdf-btn, .toc-wrap{display:none !important;}
+  body{background:#fff !important; background-image:none !important; font-size:11.5pt;}
+  .row{break-inside:avoid; padding:14px 0;}
+  .guide-img{width:150px; box-shadow:none;}
+  .page-head{padding:0 0 12px;}
+}
+</style>
+</head>
+<body>
+<header class="nav"><div class="nav-inner">
+<a class="brand" href="./"><img src="../logo.png" alt="Score Golf" class="brand-logo">Score Golf</a>
+<nav class="links"><a href="./">Home</a><a href="user-guide.html">User guide</a><a href="privacy-policy.html">Privacy policy</a><a href="support.html">Support</a><a href="../mode-d-emploi.html" lang="fr" hreflang="fr">Français</a><a href="../es/guia-de-uso.html" lang="es" hreflang="es">Español</a><a href="../it/guida.html" lang="it" hreflang="it">Italiano</a><a href="../de/anleitung.html" lang="de" hreflang="de">Deutsch</a></nav>
+</div></header>
+<main>
+<section class="page-head"><div class="wrap">
+<div class="eyebrow">User guide</div>
+<h1>Score Golf, <em>step by step.</em></h1>
+<p class="lede">Playing with friends and want some real stakes? Try Score Golf. Keep all your scorecards, follow your stats round after round and measure your progress over the period of your choice. Just like the pros!</p>
+<a class="pdf-btn" href="../ScoreGolf-user-guide-en.pdf" download>⬇ Download this guide as a PDF</a>
+</div></section>
+<section class="section"><div class="wrap">
+<div class="toc-wrap"><ul class="toc"><li><a href="#demarrer">Getting started</a></li><li><a href="#parcours">Choose or create a course</a></li><li><a href="#joueurs">Add your playing partners</a></li><li><a href="#partie">Start a round</a></li><li><a href="#saisie">Enter the round, hole by hole</a></li><li><a href="#carte">The scorecard</a></li><li><a href="#resultats">Round results</a></li><li><a href="#stats">Your stats, just like the pros</a></li><li><a href="#criteres">Understanding your statistics</a></li><li><a href="#historique">History and backup</a></li><li><a href="#tarifs">Pricing</a></li><li><a href="#compte">Your account and your data</a></li></ul></div>
+<div class="ledger"><div class="row" id="demarrer"><div class="code">01<span class="n">Step</span></div><div><img class="guide-img" src="../img/0056.jpg" alt="Getting started"><h2>Getting started</h2><p>When you open the app, the home screen greets you by name. If you are standing on a course that is already in the app, Score Golf suggests it automatically: just tap “New round”.</p><ul><li>Sign in with your Apple account, no password needed.</li><li>No ads, no trackers: your location stays on your iPhone.</li></ul></div></div><div class="row" id="parcours"><div class="code">02<span class="n">Step</span></div><div><img class="guide-img" src="../img/0057.jpg" alt="Choose or create a course"><h2>Choose or create a course</h2><p>In the <strong>Course</strong> tab, you will find the list of golf courses added by players. Tap a course to see its tees (colour, CR, Slope) and its holes (par, index).</p><ul><li>Your course is not in the list? Tap the <strong>+</strong> button to create it in a few minutes: every player will benefit from it.</li><li>To create it, have the tee table (White, Yellow, etc.) with CR and Slope, and the course scorecard at hand.</li><li><strong>CR and Slope</strong>: enter those of the 18-hole course. <strong>9-hole course</strong>: choose “9 holes”, enter each hole's official index (1 to 9) and 2 × the 9-hole CR (Slope unchanged). The 2nd loop (holes 10 to 18) is created automatically: you can play 9 or 18 holes (2 loops).</li><li>A tee is missing? Add it yourself without recreating the course. Spotted a mistake? Tap “Report this course”.</li></ul></div></div><div class="row" id="joueurs"><div class="code">03<span class="n">Step</span></div><div><img class="guide-img" src="../img/0041.jpg" alt="Add your playing partners"><h2>Add your playing partners</h2><p>In the <strong>Players</strong> tab, add each golfer with their name and handicap index. You only do this once: they will be offered for every new round.</p><ul><li>Remember to add your partners before starting the round.</li><li>The index is used to compute everyone's Course Handicap, net score and Stableford.</li></ul></div></div><div class="row" id="partie"><div class="code">04<span class="n">Step</span></div><div><h2>Start a round</h2><p>Tap <strong>New round</strong>, then select the course, the players and each player's tee (white, yellow, red…).</p><ul><li>Starting on hole 10 because the course is busy? Choose it as the starting hole: the following holes continue in order.</li><li>The marker is whoever carries the phone: only their phone records GPS distance and time.</li><li><strong>Golf cart</strong>: tick “Using a golf cart” if you are not walking. The distance walked is then neither measured nor shown (results: “Not measured”), but each shot is still measured as the crow flies. Leave it unticked to get your total walking distance.</li></ul></div></div><div class="row" id="saisie"><div class="code">05<span class="n">Step</span></div><div><img class="guide-img" src="../img/0036.jpg" alt="Enter the round, hole by hole"><h2>Enter the round, hole by hole</h2><p>On the <strong>Scoring</strong> screen, enter each player's score with the <strong>+</strong> and <strong>−</strong> buttons. Few taps, screens readable in sunlight, one hand is enough.</p><ul><li><strong>Tee off</strong>: starts the measurement once the GPS signal has stabilised.</li><li><strong>Choose a club</strong>, then tap <strong>Next shot</strong>: the shot distance is measured by GPS and linked to the club.</li><li>One more putt? The putt counter feeds your statistics.</li><li>Phone on a cart? Tap “Phone on the cart”: distance is still measured by GPS, without the pedometer check. In a golf cart, the distance walked is not measured (see “Start a round”).</li></ul></div></div><div class="row" id="carte"><div class="code">06<span class="n">Step</span></div><div><img class="guide-img" src="../img/0039.jpg" alt="The scorecard"><h2>The scorecard</h2><p>The scorecard can be viewed as <strong>Gross</strong>, <strong>Net</strong> and <strong>Stableford</strong>, with each player's hole-by-hole detail.</p><ul><li>Tap <strong>Finish the round</strong> to close it, even if not every hole was played.</li><li>The detailed card can be shared or printed as a PDF, for example to show it to your partners.</li></ul></div></div><div class="row" id="resultats"><div class="code">07<span class="n">Step</span></div><div><img class="guide-img" src="../img/0046.jpg" alt="Round results"><h2>Round results</h2><p>At the end, the summary shows the round's duration, the distance walked, and each player's front and back nine scores (gross, net, Stableford).</p></div></div><div class="row" id="stats"><div class="code">08<span class="n">Step</span></div><div><img class="guide-img" src="../img/0051.jpg" alt="Your stats, just like the pros"><h2>Your stats, just like the pros</h2><p>In <strong>Profile</strong>, follow your statistics round after round, or cumulated over <strong>the period of your choice</strong> with “Statistics by period”.</p><ul><li>Gross and net Stroke AVG, Driving, Driving Accuracy, GIR, Putts AVG, Putts per GIR, Scrambles.</li><li>Average distance of every club in your bag.</li><li>Surprise your golf pro: show them your stats. Their advice and lessons will target your weak spots.</li><li>A “-” means the statistic cannot be calculated yet (for example, no putts entered).</li></ul></div></div><div class="row" id="criteres"><div class="code">09<span class="n">Step</span></div><div><h2>Understanding your statistics</h2><p>Each statistic is calculated over the rounds of the period you choose. A “-” means it cannot be calculated yet. Only complete rounds (every hole entered) are counted; choose “9 holes” or “18 holes” to avoid mixing the two formats.</p><ul><li><strong>Stroke AVG</strong> (gross): average score per round, as a total number of strokes. Each round counts once: filter on 9 or 18 holes to compare rounds of the same length.</li><li><strong>Stroke AVG Net</strong>: the same average, after deducting the strokes your handicap gives you on each hole. It lets you compare rounds played on different courses or tees.</li><li><strong>Driving (m or yds)</strong>: average distance of your tee shots, measured by GPS.</li><li><strong>Driving Accuracy (%)</strong>: share of tee shots that finish on the fairway. Par 3s are excluded. Remember to tick “Fairway hit” when scoring: an unticked tee shot counts as missed.</li><li><strong>GIR (%)</strong> – Green in Regulation: share of holes where the ball is on the green in two strokes fewer than par (1 stroke on a par 3, 2 on a par 4, 3 on a par 5). In Score Golf your handicap is taken into account: the strokes you receive on the hole are added. It is therefore a “net” statistic.</li><li><strong>Putts AVG</strong>: average number of putts per hole (not per round), over the holes where you entered your putts.</li><li><strong>Putts per GIR</strong>: average number of putts on holes where the green is reached in regulation. Around 2 is normal; lower means you putt very well. It is based on net GIR.</li><li><strong>Scrambles (%)</strong>: share of holes where the green is missed in regulation but you still save par (chip, bunker, approach from the rough). It is calculated net: par is compared with your score after strokes received.</li><li><strong>In short</strong>: Driving, Driving Accuracy and Putts AVG do not depend on handicap; Stroke AVG Net, GIR, Putts per GIR and Scrambles do.</li></ul></div></div><div class="row" id="historique"><div class="code">10<span class="n">Step</span></div><div><img class="guide-img" src="../img/0049.jpg" alt="History and backup"><h2>History and backup</h2><p>The <strong>History</strong> tab keeps all your rounds and their scorecards. You can look them up at any time, even after the 2 trial rounds.</p><ul><li>In Profile > <strong>Backup</strong>, an automatic backup is made when the app opens (at most once every 24 hours). You can also back up on demand.</li></ul></div></div><div class="row" id="tarifs"><div class="code">11<span class="n">Step</span></div><div><h2>Pricing</h2><p>No subscription. <strong>Your first 2 rounds are free</strong> so you can try every feature. To carry on, a one-time purchase of <strong>€4.99</strong> (France price) unlocks the app for good: unlimited rounds, no ads.</p></div></div><div class="row" id="compte"><div class="code">12<span class="n">Step</span></div><div><h2>Your account and your data</h2><p>You can sign out or delete your account at any time from the Profile tab, Account section. To learn more, read the <a class="inline" href="privacy-policy.html">privacy policy</a>.</p><ul><li>A question or a suggestion? Write to <a class="inline" href="mailto:scoregolf@jb-app.fr">scoregolf@jb-app.fr</a>.</li></ul></div></div></div>
+</div></section>
+</main>
+<footer><div class="wrap foot-row">
+<div class="foot-links"><a href="./">Home</a><a href="privacy-policy.html">Privacy policy</a><a href="support.html">Support</a><a href="mailto:scoregolf@jb-app.fr">scoregolf@jb-app.fr</a></div>
+<div class="copy">© 2026 JB App — Score Golf</div>
+</div></footer>
+</body>
+</html>
