@@ -126,7 +126,7 @@
     <div class="eyebrow">Documentation</div>
     <h1>Mode d'emploi</h1>
     <p class="lede">Le guide complet de l'application, écran par écran.</p>
-    <div class="version-tag">Version 1.0.3</div>
+    <div class="version-tag">Version 1.0.4</div>
     <div class="version-tag" style="margin-top:6px"><strong>Français</strong> · <a href="https://jb-app.fr/mesfinances/en/user-guide.html" hreflang="en" lang="en" style="color:inherit">English</a> · <a href="https://jb-app.fr/mesfinances/de/anleitung.html" hreflang="de" lang="de" style="color:inherit">Deutsch</a> · <a href="https://jb-app.fr/mesfinances/it/guida.html" hreflang="it" lang="it" style="color:inherit">Italiano</a> · <a href="https://jb-app.fr/mesfinances/es/guia.html" hreflang="es" lang="es" style="color:inherit">Español</a></div>
   </div>
 
@@ -273,16 +273,42 @@
     <h3>Banques</h3>
     <p>Filtre par banque ou par groupe de banques (icône 🔗, sélectionne en un clic tout le groupe). Le détail par nature (activable/désactivable) montre la répartition des dépenses code - natures.</p>
 
-    <h3>Cartes de synthèse</h3>
-    <p>« Budgets sélectionnés » totalise les codes budget sélectionnés (cf. Paramètres) pour le périmètre choisi.</p>
+    <h3>Pavé de synthèse</h3>
+    <p>En haut de l'écran, pour les codes budget sélectionnés (cf. Paramètres) et les banques choisies :</p>
+    <ul>
+      <li><strong>Résultat</strong> : dépenses moins recettes de la période (rouge = dépense nette, vert = recette nette).</li>
+      <li><strong>Budget mensuel / annuel</strong> : total des budgets de la période, avec le pourcentage consommé (vert/orange/rouge).</li>
+      <li><strong>Prévision fin de mois</strong> : le résultat, plus les opérations récurrentes encore à intégrer d'ici la fin du mois en cours (y compris celles en retard). Elle s'affiche seulement pour le mois en cours ou l'année en cours, et ne prend en compte que les récurrents rattachés à un code budget sélectionné.</li>
+    </ul>
+
+    <h3>Un budget par année</h3>
+    <p>Chaque budget appartient à une année : celle du mois affiché, ou l'année choisie en mode « Par année ». Changer d'année, c'est donc changer de budget ; les années passées gardent leur propre budget. L'année suivante est toujours proposée dans le sélecteur pour préparer ton budget à l'avance.</p>
+    <p>Quand l'année affichée n'a encore aucun budget alors que la précédente en a un, le bouton <strong>« Reprendre le budget AAAA »</strong> apparaît sous le pavé de synthèse : il copie en une fois tous les budgets de l'année précédente (par banque, par groupe et globaux). Il ne reste qu'à ajuster les montants qui changent.</p>
+
+    <h3>Budget par groupe ou par banque</h3>
+    <p>Un budget mensuel appartient soit à un <strong>groupe de banques</strong>, soit à une <strong>banque hors groupe</strong>. Le champ de saisie indique à qui il s'applique :</p>
+    <ul>
+      <li>sélectionne le groupe (🔗) → « Budget mensuel du groupe « … » » ;</li>
+      <li>sélectionne une seule banque hors groupe → « Budget mensuel de « … » » ;</li>
+      <li>« Toutes » sans aucun budget par banque ou par groupe → budget global du code.</li>
+    </ul>
+    <p>Dans les autres cas (plusieurs banques, « Toutes » avec des budgets par banque, une banque qui fait partie d'un groupe), le montant affiché est un <strong>total en lecture seule</strong>, avec une explication.</p>
 
     <h3>Carte de code budget</h3>
     <p>Le montant que tu saisis doit être le budget mensuel — en mode « Par année », l'app affiche la valeur multipliée par 12.</p>
     <ul>
       <li><strong>Ligne du haut</strong> : dépense de la période en cours, comparée à la période précédente avec le pourcentage d'évolution.</li>
       <li><strong>Ligne « Budget »</strong> : total informatif de la période, avec le pourcentage d'utilisation (vert/orange/rouge selon le dépassement).</li>
-      <li><strong>Champ « Budget mensuel »</strong> : c'est ici que tu saisis ou modifies le budget — toujours en valeur mensuelle.</li>
+      <li><strong>Champ « Budget mensuel »</strong> : c'est ici que tu saisis ou modifies le budget — toujours en valeur mensuelle. Le bouton <strong>+/−</strong> inverse le signe : un budget négatif correspond à une recette attendue (un versement, par exemple).</li>
     </ul>
+
+    <h3>PDF du budget réalisé</h3>
+    <p>L'icône 📄 en haut à droite propose les années disponibles. Choisis-en une pour créer un PDF de l'année civile, avec les mêmes filtres que l'écran (banques, codes sélectionnés, détail par nature) :</p>
+    <ul>
+      <li><strong>Synthèse annuelle</strong> (portrait) : réalisé, budget annuel, écart, % du budget, année précédente et évolution, puis des barres réalisé/budget par code ;</li>
+      <li><strong>Détail par mois</strong> (paysage) : de janvier à décembre, total, budget, % et année précédente.</li>
+    </ul>
+    <p>Le PDF s'ouvre dans la feuille de partage : Fichiers, Mail, Imprimer…</p>
     <div class="tip"><span class="glyph">💡</span><span>Un groupe de banques (icône 🔗) permet de consolider plusieurs banques (au sens de l'application MesFinances). Ce groupe est souvent composé de ta banque principale associée éventuellement à une carte de crédit à débit différé ainsi qu'à un porte-monnaie (Liquidités).</span></div>
     <div class="tip"><span class="glyph">💡</span><span>Les budgets sélectionnés permettent de bien gérer ton budget sans être pollué par ceux purement techniques (écritures internes entre les banques).</span></div>
     <a class="back-top" href="#top">↑ Haut de page</a>

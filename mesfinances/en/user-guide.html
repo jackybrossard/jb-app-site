@@ -123,7 +123,7 @@
     <div class="eyebrow">Documentation</div>
     <h1>User guide</h1>
     <p class="lede">The complete guide to the app, screen by screen.</p>
-    <div class="version-tag">Version 1.0.3</div>
+    <div class="version-tag">Version 1.0.4</div>
     <div class="version-tag" style="margin-top:6px"><a href="https://jb-app.fr/mesfinances/mode-emploi.html" hreflang="fr" lang="fr" style="color:inherit">Français</a> · <strong>English</strong> · <a href="https://jb-app.fr/mesfinances/de/anleitung.html" hreflang="de" lang="de" style="color:inherit">Deutsch</a> · <a href="https://jb-app.fr/mesfinances/it/guida.html" hreflang="it" lang="it" style="color:inherit">Italiano</a> · <a href="https://jb-app.fr/mesfinances/es/guia.html" hreflang="es" lang="es" style="color:inherit">Español</a></div>
   </div>
 
@@ -264,16 +264,42 @@
     <h3>Banks</h3>
     <p>Filter by bank or by bank group (🔗 icon, selects the whole group in one tap). The breakdown by category (which you can show or hide) displays how expenses are split across each code's categories.</p>
 
-    <h3>Summary cards</h3>
-    <p>“Selected budgets” totals the selected budget codes (see Settings) for the chosen scope.</p>
+    <h3>Summary panel</h3>
+    <p>At the top of the screen, for the selected budget codes (see Settings) and the chosen banks:</p>
+    <ul>
+      <li><strong>Result</strong>: expenses minus income for the period (red = net expense, green = net income).</li>
+      <li><strong>Monthly / Annual budget</strong>: total budget for the period, with the percentage used (green/orange/red).</li>
+      <li><strong>End-of-month forecast</strong>: the result plus the recurring transactions still to be posted by the end of the current month (including overdue ones). It is only shown for the current month or the current year, and only counts recurring items linked to a selected budget code.</li>
+    </ul>
+
+    <h3>One budget per year</h3>
+    <p>Each budget belongs to a year: the year of the month shown, or the year chosen in “By year” mode. Changing year means changing budget; past years keep their own budget. Next year is always offered in the picker so you can prepare your budget in advance.</p>
+    <p>When the year shown has no budget yet but the previous one does, a <strong>“Copy the YYYY budget”</strong> button appears below the summary panel: it copies all of last year's budgets at once (per bank, per group and global). You then only adjust the amounts that change.</p>
+
+    <h3>Budget per group or per bank</h3>
+    <p>A monthly budget belongs either to a <strong>bank group</strong> or to a <strong>bank outside any group</strong>. The entry field tells you which:</p>
+    <ul>
+      <li>select the group (🔗) → “Monthly budget for group “…””;</li>
+      <li>select a single bank outside any group → “Monthly budget for “…””;</li>
+      <li>“All” with no per-bank or per-group budget → the code's global budget.</li>
+    </ul>
+    <p>In other cases (several banks, “All” with per-bank budgets, a bank that belongs to a group), the amount shown is a <strong>read-only total</strong>, with an explanation.</p>
 
     <h3>Budget code card</h3>
     <p>The amount you enter must be the monthly budget — in “By year” mode, the app displays the value multiplied by 12.</p>
     <ul>
       <li><strong>Top line</strong>: spending for the current period, compared with the previous period, with the percentage change.</li>
       <li><strong>“Budget” line</strong>: informational total for the period, with the usage percentage (green/orange/red depending on the overrun).</li>
-      <li><strong>“Monthly budget” field</strong>: this is where you enter or edit the budget — always as a monthly value.</li>
+      <li><strong>“Monthly budget” field</strong>: this is where you enter or edit the budget — always as a monthly value. The <strong>+/−</strong> button flips the sign: a negative budget is expected income (a transfer, for example).</li>
     </ul>
+
+    <h3>Actual budget PDF</h3>
+    <p>The 📄 icon at the top right lists the available years. Pick one to create a PDF for that calendar year, using the same filters as the screen (banks, selected codes, breakdown by category):</p>
+    <ul>
+      <li><strong>Annual summary</strong> (portrait): actual, annual budget, variance, % of budget, previous year and change, then actual/budget bars per code;</li>
+      <li><strong>Monthly detail</strong> (landscape): January to December, total, budget, % and previous year.</li>
+    </ul>
+    <p>The PDF opens in the share sheet: Files, Mail, Print…</p>
     <div class="tip"><span class="glyph">💡</span><span>A bank group (🔗 icon) lets you consolidate several banks (in the sense of the MesFinances app). Such a group is often made up of your main bank, possibly combined with a deferred-debit credit card and a wallet (Cash).</span></div>
     <div class="tip"><span class="glyph">💡</span><span>Selected budgets let you manage your budget properly without being cluttered by purely technical ones (internal entries between banks).</span></div>
     <a class="back-top" href="#top">↑ Back to top</a>

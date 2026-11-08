@@ -121,7 +121,7 @@
 <div class="eyebrow">Documentation</div>
 <h1>Guida utente</h1>
 <p class="lede">La guida completa all'app, schermata per schermata.</p>
-<div class="version-tag">Version 1.0.3</div>
+<div class="version-tag">Version 1.0.4</div>
 <div class="version-tag" style="margin-top:6px"><a href="https://jb-app.fr/mesfinances/mode-emploi.html" hreflang="fr" lang="fr" style="color:inherit">Français</a> · <a href="https://jb-app.fr/mesfinances/en/user-guide.html" hreflang="en" lang="en" style="color:inherit">English</a> · <a href="https://jb-app.fr/mesfinances/de/anleitung.html" hreflang="de" lang="de" style="color:inherit">Deutsch</a> · <strong>Italiano</strong> · <a href="https://jb-app.fr/mesfinances/es/guia.html" hreflang="es" lang="es" style="color:inherit">Español</a></div>
 </div>
 <nav aria-label="Sommario" class="toc">
@@ -236,15 +236,38 @@
 <p>Passa da «Per mese» a «Per anno».</p>
 <h3>Banche</h3>
 <p>Filtra per banca o per gruppo di banche (icona 🔗, seleziona l'intero gruppo con un tocco). Il dettaglio per categoria (che puoi mostrare o nascondere) indica come le spese si ripartiscono tra le categorie di ogni codice.</p>
-<h3>Schede di riepilogo</h3>
-<p>«Budget selezionati» somma i codici budget selezionati (vedi Impostazioni) per l'ambito scelto.</p>
+<h3>Riquadro di riepilogo</h3>
+<p>In cima alla schermata, per i codici budget selezionati (vedi Impostazioni) e le banche scelte:</p>
+<ul>
+<li><strong>Risultato</strong>: spese meno entrate del periodo (rosso = spesa netta, verde = entrata netta).</li>
+<li><strong>Budget mensile / annuale</strong>: totale dei budget del periodo, con la percentuale consumata (verde/arancione/rosso).</li>
+<li><strong>Previsione fine mese</strong>: il risultato più le operazioni ricorrenti ancora da integrare entro la fine del mese in corso (comprese quelle in ritardo). Compare solo per il mese o l'anno in corso e considera solo le ricorrenti collegate a un codice budget selezionato.</li>
+</ul>
+<h3>Un budget per anno</h3>
+<p>Ogni budget appartiene a un anno: quello del mese visualizzato, o l'anno scelto in modalità «Per anno». Cambiare anno significa quindi cambiare budget; gli anni passati conservano il proprio budget. L'anno successivo è sempre proposto, per preparare il budget in anticipo.</p>
+<p>Quando l'anno visualizzato non ha ancora un budget ma il precedente sì, sotto il riquadro di riepilogo compare il pulsante <strong>«Riprendi il budget AAAA»</strong>: copia in una volta tutti i budget dell'anno precedente (per banca, per gruppo e globali). Restano da adattare solo gli importi che cambiano.</p>
+<h3>Budget per gruppo o per banca</h3>
+<p>Un budget mensile appartiene a un <strong>gruppo di banche</strong> oppure a una <strong>banca fuori gruppo</strong>. Il campo di inserimento indica a chi si applica:</p>
+<ul>
+<li>seleziona il gruppo (🔗) → «Budget mensile del gruppo «…»»;</li>
+<li>seleziona una sola banca fuori gruppo → «Budget mensile di «…»»;</li>
+<li>«Tutte» senza budget per banca o per gruppo → budget globale del codice.</li>
+</ul>
+<p>Negli altri casi (più banche, «Tutte» con budget per banca, una banca che fa parte di un gruppo), l'importo mostrato è un <strong>totale in sola lettura</strong>, con una spiegazione.</p>
 <h3>Scheda codice budget</h3>
 <p>L'importo da inserire è sempre il budget mensile: in modalità «Per anno», l'app mostra il valore moltiplicato per 12.</p>
 <ul>
 <li><strong>Riga superiore</strong>: spese del periodo in corso, a confronto con il periodo precedente, con la variazione percentuale.</li>
 <li><strong>Riga «Budget»</strong>: totale informativo del periodo, con la percentuale di utilizzo (verde/arancione/rosso a seconda del superamento).</li>
-<li><strong>Campo «Budget mensile»</strong>: qui inserisci o modifichi il budget, sempre come valore mensile.</li>
+<li><strong>Campo «Budget mensile»</strong>: qui inserisci o modifichi il budget, sempre come valore mensile. Il pulsante <strong>+/−</strong> inverte il segno: un budget negativo corrisponde a un'entrata prevista (un versamento, per esempio).</li>
 </ul>
+<h3>PDF del budget consuntivo</h3>
+<p>L'icona 📄 in alto a destra elenca gli anni disponibili. Scegline uno per creare un PDF dell'anno solare, con gli stessi filtri della schermata (banche, codici selezionati, dettaglio per categoria):</p>
+<ul>
+<li><strong>Sintesi annuale</strong> (verticale): consuntivo, budget annuale, scostamento, % budget, anno precedente e variazione, poi barre consuntivo/budget per codice;</li>
+<li><strong>Dettaglio mensile</strong> (orizzontale): da gennaio a dicembre, totale, budget, % e anno precedente.</li>
+</ul>
+<p>Il PDF si apre nel foglio di condivisione: File, Mail, Stampa…</p>
 <div class="tip"><span class="glyph">💡</span><span>Un gruppo di banche (icona 🔗) permette di consolidare più banche (nel senso dell'app MesFinances). Un gruppo di questo tipo è spesso composto dalla tua banca principale, eventualmente associata a una carta di credito con addebito differito e a un portafoglio (Contanti).</span></div>
 <div class="tip"><span class="glyph">💡</span><span>I budget selezionati ti permettono di gestire bene il budget senza essere disturbato da codici puramente tecnici (giroconti interni tra banche).</span></div>
 <a class="back-top" href="#top">↑ Torna su</a>

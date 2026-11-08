@@ -121,7 +121,7 @@
 <div class="eyebrow">Documentation</div>
 <h1>Guía de uso</h1>
 <p class="lede">La guía completa de la app, pantalla por pantalla.</p>
-<div class="version-tag">Version 1.0.3</div>
+<div class="version-tag">Version 1.0.4</div>
 <div class="version-tag" style="margin-top:6px"><a href="https://jb-app.fr/mesfinances/mode-emploi.html" hreflang="fr" lang="fr" style="color:inherit">Français</a> · <a href="https://jb-app.fr/mesfinances/en/user-guide.html" hreflang="en" lang="en" style="color:inherit">English</a> · <a href="https://jb-app.fr/mesfinances/de/anleitung.html" hreflang="de" lang="de" style="color:inherit">Deutsch</a> · <a href="https://jb-app.fr/mesfinances/it/guida.html" hreflang="it" lang="it" style="color:inherit">Italiano</a> · <strong>Español</strong></div>
 </div>
 <nav aria-label="Índice" class="toc">
@@ -236,15 +236,38 @@
 <p>Cambia entre «Por mes» y «Por año».</p>
 <h3>Bancos</h3>
 <p>Filtra por banco o por grupo de bancos (icono 🔗, selecciona todo el grupo con un toque). El desglose por categoría (que puedes mostrar u ocultar) indica cómo se reparten los gastos entre las categorías de cada código.</p>
-<h3>Tarjetas de resumen</h3>
-<p>«Presupuestos seleccionados» suma los códigos de presupuesto seleccionados (ver Ajustes) para el ámbito elegido.</p>
+<h3>Panel de resumen</h3>
+<p>En la parte superior de la pantalla, para los códigos de presupuesto seleccionados (ver Ajustes) y los bancos elegidos:</p>
+<ul>
+<li><strong>Resultado</strong>: gastos menos ingresos del periodo (rojo = gasto neto, verde = ingreso neto).</li>
+<li><strong>Presupuesto mensual / anual</strong>: total de presupuestos del periodo, con el porcentaje consumido (verde/naranja/rojo).</li>
+<li><strong>Previsión a fin de mes</strong>: el resultado más las operaciones recurrentes aún por integrar hasta el final del mes en curso (incluidas las atrasadas). Solo aparece para el mes o el año en curso y solo tiene en cuenta las recurrentes vinculadas a un código de presupuesto seleccionado.</li>
+</ul>
+<h3>Un presupuesto por año</h3>
+<p>Cada presupuesto pertenece a un año: el del mes mostrado, o el año elegido en el modo «Por año». Cambiar de año es, por tanto, cambiar de presupuesto; los años pasados conservan su propio presupuesto. El año siguiente siempre aparece en el selector para que prepares tu presupuesto con antelación.</p>
+<p>Cuando el año mostrado aún no tiene presupuesto pero el anterior sí, aparece bajo el panel de resumen el botón <strong>«Copiar el presupuesto de AAAA»</strong>: copia de una vez todos los presupuestos del año anterior (por banco, por grupo y globales). Solo queda ajustar los importes que cambian.</p>
+<h3>Presupuesto por grupo o por banco</h3>
+<p>Un presupuesto mensual pertenece a un <strong>grupo de bancos</strong> o a un <strong>banco fuera de grupo</strong>. El campo de entrada indica a quién se aplica:</p>
+<ul>
+<li>selecciona el grupo (🔗) → «Presupuesto mensual del grupo «…»»;</li>
+<li>selecciona un solo banco fuera de grupo → «Presupuesto mensual de «…»»;</li>
+<li>«Todos» sin presupuestos por banco ni por grupo → presupuesto global del código.</li>
+</ul>
+<p>En los demás casos (varios bancos, «Todos» con presupuestos por banco, un banco que forma parte de un grupo), el importe mostrado es un <strong>total de solo lectura</strong>, con una explicación.</p>
 <h3>Tarjeta de código de presupuesto</h3>
 <p>El importe que introduces es siempre el presupuesto mensual: en el modo «Por año», la app muestra el valor multiplicado por 12.</p>
 <ul>
 <li><strong>Línea superior</strong>: gastos del periodo en curso, comparados con el periodo anterior, con el porcentaje de variación.</li>
 <li><strong>Línea «Presupuesto»</strong>: total informativo del periodo, con el porcentaje de uso (verde/naranja/rojo según el exceso).</li>
-<li><strong>Campo «Presupuesto mensual»</strong>: aquí introduces o modificas el presupuesto, siempre como valor mensual.</li>
+<li><strong>Campo «Presupuesto mensual»</strong>: aquí introduces o modificas el presupuesto, siempre como valor mensual. El botón <strong>+/−</strong> invierte el signo: un presupuesto negativo corresponde a un ingreso previsto (una transferencia, por ejemplo).</li>
 </ul>
+<h3>PDF del presupuesto realizado</h3>
+<p>El icono 📄 arriba a la derecha muestra los años disponibles. Elige uno para crear un PDF del año natural, con los mismos filtros que la pantalla (bancos, códigos seleccionados, desglose por categoría):</p>
+<ul>
+<li><strong>Resumen anual</strong> (vertical): realizado, presupuesto anual, desviación, % presupuesto, año anterior y evolución, y después barras realizado/presupuesto por código;</li>
+<li><strong>Detalle mensual</strong> (horizontal): de enero a diciembre, total, presupuesto, % y año anterior.</li>
+</ul>
+<p>El PDF se abre en la hoja para compartir: Archivos, Mail, Imprimir…</p>
 <div class="tip"><span class="glyph">💡</span><span>Un grupo de bancos (icono 🔗) permite consolidar varios bancos (en el sentido de la app MesFinances). Este tipo de grupo suele estar formado por tu banco principal, a veces junto con una tarjeta de crédito de cargo diferido y una cartera (Efectivo).</span></div>
 <div class="tip"><span class="glyph">💡</span><span>Los presupuestos seleccionados te permiten gestionar bien tu presupuesto sin que te molesten los códigos puramente técnicos (movimientos internos entre bancos).</span></div>
 <a class="back-top" href="#top">↑ Volver arriba</a>

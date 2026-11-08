@@ -121,7 +121,7 @@
 <div class="eyebrow">Documentation</div>
 <h1>Bedienungsanleitung</h1>
 <p class="lede">Die vollständige Anleitung zur App, Bildschirm für Bildschirm.</p>
-<div class="version-tag">Version 1.0.3</div>
+<div class="version-tag">Version 1.0.4</div>
 <div class="version-tag" style="margin-top:6px"><a href="https://jb-app.fr/mesfinances/mode-emploi.html" hreflang="fr" lang="fr" style="color:inherit">Français</a> · <a href="https://jb-app.fr/mesfinances/en/user-guide.html" hreflang="en" lang="en" style="color:inherit">English</a> · <strong>Deutsch</strong> · <a href="https://jb-app.fr/mesfinances/it/guida.html" hreflang="it" lang="it" style="color:inherit">Italiano</a> · <a href="https://jb-app.fr/mesfinances/es/guia.html" hreflang="es" lang="es" style="color:inherit">Español</a></div>
 </div>
 <nav aria-label="Inhalt" class="toc">
@@ -236,15 +236,38 @@
 <p>Wechsle zwischen „Pro Monat“ und „Pro Jahr“.</p>
 <h3>Banken</h3>
 <p>Filtere nach Bank oder nach Bankgruppe (Symbol 🔗, wählt die ganze Gruppe mit einem Tipp aus). Die Aufschlüsselung nach Kategorie (ein- oder ausblendbar) zeigt, wie sich die Ausgaben auf die Kategorien jedes Codes verteilen.</p>
-<h3>Übersichtskarten</h3>
-<p>„Ausgewählte Budgets“ summiert die ausgewählten Budgetcodes (siehe Einstellungen) für den gewählten Bereich.</p>
+<h3>Übersichtsfeld</h3>
+<p>Oben auf dem Bildschirm, für die ausgewählten Budgetcodes (siehe Einstellungen) und die gewählten Banken:</p>
+<ul>
+<li><strong>Ergebnis</strong>: Ausgaben minus Einnahmen des Zeitraums (rot = Nettoausgabe, grün = Nettoeinnahme).</li>
+<li><strong>Monats- / Jahresbudget</strong>: Gesamtbudget des Zeitraums mit dem verbrauchten Prozentsatz (grün/orange/rot).</li>
+<li><strong>Prognose Monatsende</strong>: das Ergebnis plus die wiederkehrenden Buchungen, die bis Ende des laufenden Monats noch zu übernehmen sind (auch überfällige). Sie erscheint nur für den laufenden Monat oder das laufende Jahr und berücksichtigt nur wiederkehrende Buchungen mit einem ausgewählten Budgetcode.</li>
+</ul>
+<h3>Ein Budget pro Jahr</h3>
+<p>Jedes Budget gehört zu einem Jahr: dem Jahr des angezeigten Monats oder dem im Modus „Pro Jahr“ gewählten Jahr. Ein anderes Jahr bedeutet also ein anderes Budget; vergangene Jahre behalten ihr eigenes Budget. Das nächste Jahr wird immer angeboten, damit du dein Budget im Voraus planen kannst.</p>
+<p>Hat das angezeigte Jahr noch kein Budget, das Vorjahr aber schon, erscheint unter dem Übersichtsfeld die Schaltfläche <strong>„Budget JJJJ übernehmen“</strong>: Sie kopiert alle Budgets des Vorjahres auf einmal (pro Bank, pro Gruppe und global). Danach passt du nur noch die geänderten Beträge an.</p>
+<h3>Budget pro Gruppe oder pro Bank</h3>
+<p>Ein Monatsbudget gehört entweder zu einer <strong>Bankgruppe</strong> oder zu einer <strong>Bank außerhalb einer Gruppe</strong>. Das Eingabefeld zeigt an, wofür es gilt:</p>
+<ul>
+<li>Gruppe (🔗) wählen → „Monatsbudget der Gruppe „…““;</li>
+<li>eine einzelne Bank außerhalb einer Gruppe wählen → „Monatsbudget von „…““;</li>
+<li>„Alle“ ohne Budget pro Bank oder Gruppe → globales Budget des Codes.</li>
+</ul>
+<p>In allen anderen Fällen (mehrere Banken, „Alle“ mit Budgets pro Bank, eine Bank, die zu einer Gruppe gehört) ist der angezeigte Betrag eine <strong>schreibgeschützte Summe</strong>, mit einer Erklärung.</p>
 <h3>Budgetcode-Karte</h3>
 <p>Der eingegebene Betrag ist immer das Monatsbudget – im Modus „Pro Jahr“ zeigt die App den Wert mal 12 an.</p>
 <ul>
 <li><strong>Obere Zeile</strong>: Ausgaben des laufenden Zeitraums im Vergleich zum vorherigen, mit prozentualer Veränderung.</li>
 <li><strong>Zeile „Budget“</strong>: informative Summe für den Zeitraum, mit dem Nutzungsgrad (grün/orange/rot je nach Überschreitung).</li>
-<li><strong>Feld „Monatsbudget“</strong>: Hier gibst du das Budget ein oder änderst es – immer als Monatswert.</li>
+<li><strong>Feld „Monatsbudget“</strong>: Hier gibst du das Budget ein oder änderst es – immer als Monatswert. Die Schaltfläche <strong>+/−</strong> kehrt das Vorzeichen um: Ein negatives Budget ist eine erwartete Einnahme (z. B. eine Überweisung).</li>
 </ul>
+<h3>PDF Ist-Budget</h3>
+<p>Das Symbol 📄 oben rechts listet die verfügbaren Jahre auf. Wähle eines, um ein PDF für dieses Kalenderjahr zu erstellen, mit denselben Filtern wie auf dem Bildschirm (Banken, ausgewählte Codes, Aufschlüsselung nach Kategorie):</p>
+<ul>
+<li><strong>Jahresübersicht</strong> (Hochformat): Ist, Jahresbudget, Abweichung, % Budget, Vorjahr und Veränderung, danach Balken Ist/Budget je Code;</li>
+<li><strong>Monatsdetail</strong> (Querformat): Januar bis Dezember, Summe, Budget, % und Vorjahr.</li>
+</ul>
+<p>Das PDF öffnet sich im Teilen-Menü: Dateien, Mail, Drucken …</p>
 <div class="tip"><span class="glyph">💡</span><span>Mit einer Bankgruppe (Symbol 🔗) kannst du mehrere Banken (im Sinne der App MesFinances) zusammenfassen. Eine solche Gruppe besteht oft aus deiner Hauptbank, eventuell ergänzt um eine Kreditkarte mit verzögerter Abbuchung und eine Geldbörse (Bargeld).</span></div>
 <div class="tip"><span class="glyph">💡</span><span>Mit den ausgewählten Budgets behältst du dein Budget im Griff, ohne von rein technischen Codes (interne Umbuchungen zwischen Banken) gestört zu werden.</span></div>
 <a class="back-top" href="#top">↑ Nach oben</a>
